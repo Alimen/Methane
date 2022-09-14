@@ -3,10 +3,629 @@
 <head>
 	<meta charset="UTF-8">
 	<title>甲烷疑雲</title>
+
+	<link rel="stylesheet" type="text/css" href="style/body.css">
+	<link rel="stylesheet" type="text/css" href="style/button.css">
+	<link rel="stylesheet" type="text/css" href="style/popup.css">
+	<link rel="stylesheet" type="text/css" href="style/step.css">
+	<link rel="stylesheet" type="text/css" href="style/textarea.css">
+
+	<script type="text/javascript" src="script/navigation.js"></script>
+	<script type="text/javascript" src="script/exp1.js"></script>
+	<script type="text/javascript" src="script/quiz1.js"></script>
+	<script type="text/javascript" src="script/exp2.js"></script>
+	<script type="text/javascript" src="script/quiz2.js"></script>
 </head>
 
 <body>
-	<h1>Hello World</h1>
+	<div class="aside">
+		<div class="aside-container">	   
+			<div class="ui vertical steps">
+				<div class="active step" id="step0">
+					<img src="image/check.png" class="check-icon" id="cm0">
+					<div class="content">
+						<div class="description" id="step-desc1">前言 1</div>
+					</div>
+				</div>
+				<div class="disabled step" id="step1">
+					<img src="image/check.png" class="check-icon hidden" id="cm1">
+					<div class="content">
+						<div class="description" id="step-desc2">實驗 1</div>
+					</div>
+				</div>
+				<div class="disabled step" id="step2">
+					<img src="image/check.png" class="check-icon hidden" id="cm2">
+					<div class="content">
+						<div class="description" id="step-desc3">問題 1<small>&amp;</small>2</div>
+					</div>
+				</div>
+				<div class="disabled step" id="step3">
+					<img src="image/check.png" class="check-icon hidden" id="cm3">
+					<div class="content">
+						<div class="description" id="step-desc4">實驗 2</div>
+					</div>
+				</div>
+				<div class="disabled step" id="step4">
+					<img src="image/check.png" class="check-icon hidden" id="cm4">
+					<div class="content">
+						<div class="description" id="step-desc5">問題 3</div>
+					</div>
+				</div>
+				<div class="disabled step" id="step5">
+					<img src="image/check.png" class="check-icon hidden" id="cm5">
+					<div class="content">
+						<div class="description" id="step-desc6">問題 4</div>
+					</div>
+				</div>
+				<div class="disabled step" id="step6">
+					<img src="image/check.png" class="check-icon hidden" id="cm6">
+					<div class="content">
+						<div class="description" id="step-desc7">問題 5<small>&amp;</small>6</div>
+					</div>
+				</div>
+				<div class="disabled step" id="step7">
+					<img src="image/check.png" class="check-icon hidden" id="cm7">
+					<div class="content">
+						<div class="description" id="step-desc8">前言 2</div>
+					</div>
+				</div>
+				<div class="disabled step" id="step8">
+					<img src="image/check.png" class="check-icon hidden" id="cm8">
+					<div class="content">
+						<div class="description" id="step-desc9">前言 2（續）</div>
+					</div>
+				</div>
+				<div class="disabled step" id="step9">
+					<img src="image/check.png" class="check-icon hidden" id="cm9">
+					<div class="content">
+						<div class="description" id="step-desc10">問題 7</div>
+					</div>
+				</div>
+				<div class="disabled step" id="step10">
+					<img src="image/check.png" class="check-icon hidden" id="cm10">
+					<div class="content">
+						<div class="description" id="step-desc11">問題 8</div>
+					</div>
+				</div>
+				<div class="disabled step" id="step11">
+					<img src="image/check.png" class="check-icon hidden" id="cm11">
+					<div class="content">
+						<div class="description" id="step-desc12">問題 9</div>
+					</div>
+				</div>
+				<div class="disabled step" id="step12">
+					<img src="image/check.png" class="check-icon hidden" id="cm12">
+					<div class="content">
+						<div class="description" id="step-desc13">問題 10</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="main">
+		<div id="intro" class="main-block">
+			<div class="main-block-title">
+				<h2>前言</h2>
+			</div>
+			<div class="intro-desc">
+		　　根據經濟學人（The Economist）最近的報導（<a href="https://www.economist.com/printedition/2018-04-28" target="_blank">Apr, 28<sup>th</sup>, 2018</a>），過去的十年間，大氣中的甲烷（CH<span style="font-size: 12px">4</span>）含量驟升，已達工業革命前的2.5倍（如【圖1】）。甲烷具有強大的吸熱能力，雖然大氣中甲烷的排放量相較於二氧化碳（CO<span style="font-size: 12px">2</span>）較少，在大氣中存留十年左右後，即幾乎偵測不到，但相同分子數或相同體積的條件下甲烷造成大氣暖化的指數，卻是二氧化碳的25倍。<br><br>
+		　　科學家們對於大氣中甲烷的增加提出各自的研究成果，其中，加州大學伯克利分校的 Alexander Turner 研究團隊認為大氣中氫氧自由基（．OH）的減少，是大氣中甲烷驟升在數學上最有可能的解釋。因為．OH 可與甲烷反應，產生水及二氧化碳，進而消解大氣中的甲烷。然而為什麼大氣中．OH 會減少則是另一個未解的難題。<br><br>
+			　　小柯想探討「．OH 對甲烷的影響」，根據相關文獻設計了以下實驗。<br><br>
+			</div>
+			<div class="intro-img">
+				<img src="image/fig1.jpg"><br>
+				【圖1】
+			</div>
+		</div>
+		<div class="main-block-footer">
+			<div class="next-button-container">
+				<button id="next0" class="small green fluid ui right labeled icon button" onclick="scrollToSection(1)">
+					<i class="icon"><img src="image/right.png" class="arrow-icon"></i>
+					<div id="next0-desc">實驗開始！</div>
+				</button>
+			</div>
+		</div>
+		
+		<div id="exp1" class="main-block">
+			<div class="main-block-title">
+				<h2>實驗 1</h2>
+			</div>
+			<image id="exp1TimerBar" width="0px" src="image/TimerBar.png" class="exp1-timer-bar">
+			<image src="image/Timer.png" class="exp1-timer">
+
+			<div class="exp1-padding-left"> </div>
+			<iframe id="exp1-bottleA" class="exp1-bottle" src="exp1.html" frameborder="0" onload="prepareExp1BottleA()"></iframe> 
+			<iframe id="exp1-bottleB" class="exp1-bottle" src="exp1.html" frameborder="0" onload="prepareExp1BottleB()"></iframe> 
+			<iframe id="exp1-bottleC" class="exp1-bottle" src="exp1.html" frameborder="0" onload="prepareExp1BottleC()"></iframe> 
+
+			<div class="exp1-table-container">
+				<table class="exp1-table">
+					<tr><th>秒</th><th>A 瓶溫度</th><th>B 瓶溫度</th><th>C 瓶溫度</th></tr>
+					<tr id="exp1row0"><td>  0</td><td>20.0</td><td>20.0</td><td>20.0</td></tr>
+					<tr id="exp1row1"><td> 25</td><td> </td><td> </td><td> </td></tr>
+					<tr id="exp1row2"><td> 50</td><td> </td><td> </td><td> </td></tr>
+					<tr id="exp1row3"><td> 75</td><td> </td><td> </td><td> </td></tr>
+					<tr id="exp1row4"><td>100</td><td> </td><td> </td><td> </td></tr>
+					<tr id="exp1row5"><td>125</td><td> </td><td> </td><td> </td></tr>
+					<tr id="exp1row6"><td>150</td><td> </td><td> </td><td> </td></tr>
+					<tr id="exp1row7"><td>175</td><td> </td><td> </td><td> </td></tr>
+					<tr id="exp1row8"><td>200</td><td> </td><td> </td><td> </td></tr>
+				</table>
+				<span style="margin-left: 115px;">【表1】</span>
+			</div>
+
+			<div id="exp1-desc" class="exp1-desc">
+				<p style="text-indent: -1em;">小柯設計的實驗及操作步驟如下：</p>
+				<p style="text-indent: -1em;">1.  小柯取了三個2公升裝的寶特瓶，各自滴入一滴的水並裝滿空氣後鎖緊（此時水會蒸發成水蒸氣），分別編號A、B、C。</p>
+			</div>
+			<div class="exp1-prvbtn-container">
+				<bottom id="exp1-prvbtn" class="blue compact mini ui icon button disabled" onclick="onExp1PrvBtn()">
+					<i class="icon"><img src="image/left.png" width="28px" height="28px"></i>
+				</button>
+			</div>
+			<div class="exp1-nxtbtn-container">
+				<bottom id="exp1-nxtbtn" class="blue compact mini ui icon button" onclick="onExp1NxtBtn()">
+					<i class="icon"><img src="image/right.png" width="28px" height="28px"></i>
+				</button>
+			</div>
+		</div>
+		<div class="main-block-footer">
+			<div class="prv-button-container">
+				<button id="prv1" class="small orange fluid ui labeled icon button" onclick="scrollToSection(0)">
+					<i class="icon"><img src="image/left.png" class="arrow-icon"></i>
+					<div id="prv1-desc">前言 1</div>
+				</button>
+			</div>
+			<div class="next-button-container">
+				<button id="next1" class="small green fluid ui right labeled icon button" onclick="scrollToSection(2)">
+					<i class="icon"><img src="image/right.png" class="arrow-icon"></i>
+					<div id="next1-desc">問題 1<small>&amp;</small>2</div>
+				</button>
+			</div>
+		</div>		
+
+		<div id="quiz1" class="main-block">
+			<div class="main-block-title">
+				<h2>請回答下列問題</h2>
+			</div>
+			<div class="quiz1-graph-container">
+				<div class="quiz1-table-container">
+					<table class="exp1-table">
+						<tr><th>秒</th><th>A 瓶溫度</th><th>B 瓶溫度</th><th>C 瓶溫度</th></tr>
+						<tr><td>0</td><td>20.0</td><td>20.0</td><td>20.0</td></tr>
+						<tr><td>25</td><td>25.5</td><td>26.5</td><td>29.0</td></tr>
+						<tr><td>50</td><td>28.0</td><td>29.0</td><td>30.5</td></tr>
+						<tr><td>75</td><td>29.0</td><td>29.7</td><td>31.0</td></tr>
+						<tr><td>100</td><td>29.2</td><td>30.0</td><td>31.2</td></tr>
+						<tr><td>125</td><td>29.4</td><td>30.2</td><td>31.3</td></tr>
+						<tr><td>150</td><td>29.5</td><td>30.4</td><td>31.4</td></tr>
+						<tr><td>175</td><td>29.6</td><td>30.5</td><td>31.5</td></tr>
+						<tr><td>200</td><td>29.6</td><td>30.5</td><td>31.5</td></tr>
+					</table>
+					<span style="margin-left: 115px;">【表1】</span>
+				</div>
+				<div class="quiz1-canvas-container">
+				溫度 (°C)
+					<canvas id="quiz1Canvas" width="300px" height="300px"></canvas>
+					<span style="margin-left: 115px;">時間 (秒)</span>
+				</div>
+			</div>
+
+			<div class="quiz3-desc">
+				<p style="text-indent: -1em;">1.  小柯根據【表1】在右方方格紙上作圖，但是不小心忘記標示圖例了！你能夠幫忙配對曲線與圖例嗎？</p>
+				<p style="margin-left: 3em;">
+					<img src="image/triangle_line.png"> →  
+					<select id="quiz1-select1" onchange="q1SelectChanged(1)">
+						<option value="unknown">？？？</option>
+						<option value="A">A 瓶 (空氣 + 水)</option>
+						<option value="B">B 瓶 (空氣 + 水 + CO₂)</option>
+						<option value="C">C 瓶 (空氣 + 水 + CH₄)</option>
+					</select><br>
+					<img src="image/dot_line.png"> →  
+					<select id="quiz1-select2" onchange="q1SelectChanged(2)">
+						<option value="unknown">？？？</option>
+						<option value="A">A 瓶 (空氣 + 水)</option>
+						<option value="B">B 瓶 (空氣 + 水 + CO₂)</option>
+						<option value="C">C 瓶 (空氣 + 水 + CH₄)</option>
+					</select><br>
+					<img src="image/square_line.png"> →  
+					<select id="quiz1-select3" onchange="q1SelectChanged(3)">
+						<option value="unknown">？？？</option>
+						<option value="A">A 瓶 (空氣 + 水)</option>
+						<option value="B">B 瓶 (空氣 + 水 + CO₂)</option>
+						<option value="C">C 瓶 (空氣 + 水 + CH₄)</option>
+					</select>
+				</p>
+
+				<br>
+				<br>
+				<p style="text-indent: -1em;">2.  上述實驗1中，寶特瓶 A 扮演的角色為何？</p>
+				<p style="margin-left: 3em;">
+					<input type="radio" name="quiz1radio" value="實驗組" onchange="q1RadioChanged()"> 實驗組 <br>
+					<input type="radio" name="quiz1radio" value="對照組" onchange="q1RadioChanged()"> 對照組
+				</p>
+			</div>
+		</div>
+		<div class="main-block-footer">
+			<div class="prv-button-container">
+				<button id="prv2" class="small orange fluid ui labeled icon button" onclick="scrollToSection(1)">
+					<i class="icon"><img src="image/left.png" class="arrow-icon"></i>
+					<div id="prv2-desc">實驗 1</div>
+				</button>
+			</div>
+		<div id="next2-hint" class="summitbtn-warning-container">
+			<br>問題 1<small>&amp;</small>2 尚未完成作答
+		</div>
+			<div class="next-button-container">
+				<button id="next2" class="small green fluid ui right labeled icon button disabled" onclick="scrollToSection(3)">
+					<i class="icon"><img src="image/right.png" class="arrow-icon"></i>
+					<div id="next2-desc">實驗 2</div>
+				</button>
+			</div>
+		</div>
+
+		<div id="exp2" class="main-block">
+			<div class="main-block-title">
+				<h2>實驗 2</h2>
+			</div>
+			<image id="exp2TimerBar" width="0px" src="image/TimerBar.png" class="exp1-timer-bar">
+			<image src="image/Timer.png" class="exp1-timer">
+
+			<div class="exp1-padding-left"> </div>
+			<iframe id="exp2-bottleA" class="exp1-bottle" src="exp2.html" frameborder="0" onload="prepareExp2BottleA()"></iframe> 
+			<iframe id="exp2-bottleB" class="exp1-bottle" src="exp2.html" frameborder="0" onload="prepareExp2BottleB()"></iframe> 
+			<iframe id="exp2-bottleC" class="exp1-bottle" src="exp2.html" frameborder="0" onload="prepareExp2BottleC()"></iframe> 
+
+			<div class="exp1-table-container">
+				<table class="exp1-table">
+					<tr><th>秒</th><th>A 瓶溫度</th><th>B 瓶溫度</th><th>C 瓶溫度</th></tr>
+					<tr id="exp2row0"><td>  0</td><td>20.0</td><td>20.0</td><td>20.0</td></tr>
+					<tr id="exp2row1"><td> 25</td><td> </td><td> </td><td> </td></tr>
+					<tr id="exp2row2"><td> 50</td><td> </td><td> </td><td> </td></tr>
+					<tr id="exp2row3"><td> 75</td><td> </td><td> </td><td> </td></tr>
+					<tr id="exp2row4"><td>100</td><td> </td><td> </td><td> </td></tr>
+					<tr id="exp2row5"><td>125</td><td> </td><td> </td><td> </td></tr>
+					<tr id="exp2row6"><td>150</td><td> </td><td> </td><td> </td></tr>
+					<tr id="exp2row7"><td>175</td><td> </td><td> </td><td> </td></tr>
+					<tr id="exp2row8"><td>200</td><td> </td><td> </td><td> </td></tr>
+				</table>
+				<span style="margin-left: 115px;">【表2】</span>
+			</div>
+
+			<div id="exp2-desc" class="exp1-desc">
+				<p style="text-indent: -1em;">1.  進行完實驗1之後，小柯繼續設計「實驗2」。他知道水蒸氣會因為紫外線照射而形成．OH，故進行實驗2時，先以紫外燈照射三個寶特瓶一段時間後，才開啟燈泡進行與實驗1相同的實驗步驟來進行探究。</p>
+			</div>
+			<div class="exp1-prvbtn-container">
+				<bottom id="exp2-prvbtn" class="blue compact mini ui icon button disabled" onclick="onExp2PrvBtn()">
+					<i class="icon"><img src="image/left.png" width="28px" height="28px"></i>
+				</button>
+			</div>
+			<div class="exp1-nxtbtn-container">
+				<bottom id="exp2-nxtbtn" class="blue compact mini ui icon button" onclick="onExp2NxtBtn()">
+					<i class="icon"><img src="image/right.png" width="28px" height="28px"></i>
+				</button>
+			</div>		
+		</div>
+		<div class="main-block-footer">		
+			<div class="prv-button-container">
+				<button id="prv3" class="small orange fluid ui labeled icon button" onclick="scrollToSection(2)">
+					<i class="icon"><img src="image/left.png" class="arrow-icon"></i>
+					<div id="prv3-desc">問題 1<small>&amp;</small>2</div>
+				</button>
+			</div>
+			<div class="next-button-container">
+				<button id="next3" class="small green fluid ui right labeled icon button" onclick="scrollToSection(4)">
+					<i class="icon"><img src="image/right.png" class="arrow-icon"></i>
+					<div id="next3-desc">問題 3</div>
+				</button>
+			</div>
+		</div>
+
+		<div id="quiz3" class="main-block">
+			<div class="main-block-title">
+				<h2>請回答下列問題</h2>
+			</div>
+			<div class="quiz1-graph-container">
+				<div class="quiz1-table-container">
+					<table class="exp1-table">
+						<tr><th>秒</th><th>A 瓶溫度</th><th>B 瓶溫度</th><th>C 瓶溫度</th></tr>
+						<tr><td>0</td><td>20.0</td><td>20.0</td><td>20.0</td></tr>
+						<tr><td>25</td><td>25.6</td><td>26.6</td><td>27.4</td></tr>
+						<tr><td>50</td><td>28.1</td><td>29.0</td><td>29.6</td></tr>
+						<tr><td>75</td><td>29.0</td><td>29.7</td><td>30.2</td></tr>
+						<tr><td>100</td><td>29.3</td><td>30.0</td><td>30.4</td></tr>
+						<tr><td>125</td><td>29.4</td><td>30.2</td><td>30.7</td></tr>
+						<tr><td>150</td><td>29.6</td><td>30.5</td><td>30.8</td></tr>
+						<tr><td>175</td><td>29.6</td><td>30.5</td><td>30.9</td></tr>
+						<tr><td>200</td><td>29.6</td><td>30.5</td><td>30.9</td></tr>
+					</table>
+					<span style="margin-left: 115px;">【表2】</span>
+				</div>
+				<div class="quiz1-canvas-container">
+				溫度 (°C)
+					<canvas id="quiz2Canvas" width="300px" height="300px"></canvas>
+					<span style="margin-left: 115px;">時間 (秒)</span>
+				</div>
+			</div>
+
+			<div class="quiz3-desc">
+				<p style="text-indent: -1em;">3.  粗心的小柯同樣也將實驗2作圖結果的圖例搞混了！請你再一次幫忙配對曲線與圖例。</p>
+				<p style="margin-left: 3em;">
+					<img src="image/triangle_line.png"> →  
+					<select id="quiz3-select1" onchange="q3SelectChanged(1)">
+						<option value="unknown">？？？</option>
+						<option value="A">A 瓶 (空氣 + 水)</option>
+						<option value="B">B 瓶 (空氣 + 水 + CO₂)</option>
+						<option value="C">C 瓶 (空氣 + 水 + CH₄)</option>
+					</select><br>
+					<img src="image/dot_line.png"> →  
+					<select id="quiz3-select2" onchange="q3SelectChanged(2)">
+						<option value="unknown">？？？</option>
+						<option value="A">A 瓶 (空氣 + 水)</option>
+						<option value="B">B 瓶 (空氣 + 水 + CO₂)</option>
+						<option value="C">C 瓶 (空氣 + 水 + CH₄)</option>
+					</select><br>
+					<img src="image/square_line.png"> →  
+					<select id="quiz3-select3" onchange="q3SelectChanged(3)">
+						<option value="unknown">？？？</option>
+						<option value="A">A 瓶 (空氣 + 水)</option>
+						<option value="B">B 瓶 (空氣 + 水 + CO₂)</option>
+						<option value="C">C 瓶 (空氣 + 水 + CH₄)</option>
+					</select>
+				</p>
+				
+			</div>		
+		</div>
+		<div class="main-block-footer">		
+			<div class="prv-button-container">
+				<button id="prv4" class="small orange fluid ui labeled icon button" onclick="scrollToSection(3)">
+					<i class="icon"><img src="image/left.png" class="arrow-icon"></i>
+					<div id="prv4-desc">實驗 1</div>
+				</button>
+			</div>
+		<div id="next4-hint" class="summitbtn-warning-container">
+			<br>問題 3 尚未完成作答
+		</div>
+			<div class="next-button-container">
+				<button id="next4" class="small green fluid ui right labeled icon button disabled" onclick="scrollToSection(5)">
+					<i class="icon"><img src="image/right.png" class="arrow-icon"></i>
+					<div id="next4-desc">問題 4</div>
+				</button>
+			</div>
+		</div>
+
+		<div id="quiz4" class="main-block">
+			<div class="main-block-title">
+				<h2>請回答下列問題</h2>
+			</div>
+			<div class="quiz3-canvas-container">
+				<div class="quiz3-canvas-header-container">
+					A 瓶<img src="image/dot_line.png">　B 瓶<img src="image/square_line.png">　C 瓶<img src="image/triangle_line.png"><br>
+				</div>
+				<canvas id="quiz3Canvas1" width="300px" height="300px"></canvas>
+				<canvas id="quiz3Canvas2" width="300px" height="300px"></canvas>
+				<div class="quiz3-canvas-footer1">【實驗1】</div>
+				<div class="quiz3-canvas-footer2">【實驗2】</div>
+			</div>
+
+			<div class="quiz3-desc">
+				<p style="text-indent: -1em;">4.  請比較剛剛繪製的【實驗1】和【實驗2】，A、B、C 曲線各有什麼變化？(多選題，應選2項)</p>
+				<p style="margin-left: 3em;">
+					<input type="checkbox" name="quiz3checkbox" value="A" onchange="onCheckboxChange(0)"> A曲線幾乎不變 <br>
+					<input type="checkbox" name="quiz3checkbox" value="B" onchange="onCheckboxChange(1)"> B曲線有明顯變化 <br>
+					<input type="checkbox" name="quiz3checkbox" value="C" onchange="onCheckboxChange(2)"> C曲線幾乎不變 <br>
+					<input type="checkbox" name="quiz3checkbox" value="D" onchange="onCheckboxChange(3)"> C曲線變得更貼近 B曲線 <br>
+					<input type="checkbox" name="quiz3checkbox" value="E" onchange="onCheckboxChange(4)"> C曲線和 B曲線疊合
+				</p>
+			</div>
+			
+		</div>
+		<div class="main-block-footer">		
+			<div class="prv-button-container">
+				<button id="prv5" class="small orange fluid ui labeled icon button" onclick="scrollToSection(4)">
+					<i class="icon"><img src="image/left.png" class="arrow-icon"></i>
+					<div id="prv5-desc">問題 3</div>
+				</button>
+			</div>
+		<div id="next5-hint" class="summitbtn-warning-container">
+			<br>問題 4 尚未完成作答
+		</div>
+			<div class="next-button-container">
+				<button id="next5" class="small green fluid ui right labeled icon button" onclick="scrollToSection(6)">
+					<i class="icon"><img src="image/right.png" class="arrow-icon"></i>
+					<div id="next5-desc">問題 5<small>&amp;</small>6</div>
+				</button>
+			</div>
+		</div>
+
+		<div id="quiz5" class="main-block">
+			<div class="main-block-title">
+				<h2>請回答下列問題</h2>
+			</div>
+			<div class="quiz3-canvas-container">
+				<div class="quiz3-canvas-header-container">
+					A 瓶<img src="image/dot_line.png">　B 瓶<img src="image/square_line.png">　C 瓶<img src="image/triangle_line.png"><br>
+				</div>
+				<canvas id="quiz4Canvas1" width="300px" height="300px"></canvas>
+				<canvas id="quiz4Canvas2" width="300px" height="300px"></canvas>
+				<div class="quiz3-canvas-footer1">【實驗1】</div>
+				<div class="quiz3-canvas-footer2">【實驗2】</div>
+			</div>
+			<div class="quiz3-desc">
+				<p style="text-indent: -1em;">
+			5.  倘若你剛剛的紀錄正確，實驗2的變化曲線中，A、B曲線幾乎沒有改變，但C曲線變得較貼近B曲線，可推論其原因為何？（簡答）</p>
+					<textarea id="ans1" rows="2" cols="36" onchange="updateCheck()"></textarea>
+					<br>
+					<br>
+					<br>
+					<p style="text-indent: -1em;">
+			6.  對於實驗目的而言曉明和小華有各自的想法，曉明認為僅需要進行實驗2即可，而小華認為兩組實驗都要做。你贊同哪一位同學的觀點呢？為什麼？<br><br>
+			（請先根據實驗的結果進行敘述，再說明能支持論點的論證基礎）</p>
+					<textarea id="ans2" rows="3" cols="36" onchange="updateCheck()"></textarea>
+			</div>		
+		</div>
+		<div class="main-block-footer">
+			<div class="prv-button-container">
+				<button id="prv6" class="small orange fluid ui labeled icon button" onclick="scrollToSection(5)">
+					<i class="icon"><img src="image/left.png" class="arrow-icon"></i>
+					<div id="prv6-desc">問題 4</div>
+				</button>
+			</div>
+		<div id="next6-hint" class="summitbtn-warning-container">
+			<br>問題 5<small>&amp;</small>6 尚未完成作答
+		</div>
+			<div class="next-button-container">
+				<!--<button id="next6" class="small green fluid ui right labeled icon button disabled" onclick="sumitAnswers()">-->
+				<button id="next6" class="small green fluid ui right labeled icon button disabled" onclick="scrollToSection(7)">
+					<i class="icon"><img src="image/right.png" class="arrow-icon"></i>
+					<div id="next6-desc">前言 2</div>
+				</button>
+			</div>
+		</div>
+
+		<div id="intro2" class="main-block">
+			<div class="main-block-title">
+				<h2>前言 2</h2>
+			</div>
+			<div class="intro2-img">
+				<img src="image/fig2.jpg"><br>
+				<div class="img-credit">示意圖，Image credit: U.S. Department of State</div>
+			</div>
+			<div class="intro2-desc">
+			　　根據經濟學人最近的報導，過去的十年間，大氣中的甲烷（CH<span style="font-size: 12px">4</span>）含量驟升，已達工業革命前的2.5倍。甲烷具有強大的吸熱能力，雖然甲烷的排放至大氣中的量相較於二氧化碳少，且在大氣中存留十年左右後，即幾乎偵測不到，但相同分子數或相同體積的條件下，甲烷造成溫室效應的威力，卻是二氧化碳的25倍，影響短期氣候甚鉅。然而在聯合國政府間氣候變遷專門委員會（IPCC）指出將地球升溫控制在攝氏1.5度之內，為防止氣候變遷帶來嚴重災難的唯一方法。在短期氣候變遷的議題中，探討大氣中甲烷的來源與消耗尤為重要。
+			</div>
+		</div>
+		<div class="main-block-footer">
+			<div class="prv-button-container">
+				<button id="prv6" class="small orange fluid ui labeled icon button" onclick="scrollToSection(6)">
+					<i class="icon"><img src="image/left.png" class="arrow-icon"></i>
+					<div id="prv6-desc">問題 5<small>&amp;</small>6</div>
+				</button>
+			</div>
+			<div class="next-button-container">
+				<button id="next0" class="small green fluid ui right labeled icon button" onclick="scrollToSection(8);markIntro2Readed();">
+					<i class="icon"><img src="image/right.png" class="arrow-icon"></i>
+					<div id="next0-desc">前言 2（續）</div>
+				</button>
+			</div>
+		</div>
+
+		<div id="intro2-2" class="main-block">
+			<div class="main-block-title">
+				<h2>前言 2（續）</h2>
+			</div>
+			<div class="intro2-2-img">
+				<img src="image/fig3.jpg" width="450" height="360"><br>
+				<div class="img-credit">示意圖，Image credit: rawpixel.com on Freepik</div>
+			</div>
+			<div class="intro2-2-desc">
+			甲烷於地球大氣中總量已達到1,900 百萬噸，其中人為活動影響的來源包括：<br>
+			化石燃料的產生與使用（105百萬噸/年）<br>
+			農業、畜牧業與廢棄物（188百萬噸/年）<br><br>
+	
+			自然產生的來源包括：<br>
+			生物性燃燒（34百萬噸/年）<br>
+			濕地（167百萬噸/年）<br>
+			其他自然現象（例如：地質湖泊、海洋、永凍土）（64百萬噸/年）<br><br>
+
+			於大氣中消耗甲烷的方式有：<br>
+			氣溶膠沉降（33百萬噸/年）<br>
+			光化學反應（515百萬噸/年）<br><br>
+			</div>
+		</div>
+		<div class="main-block-footer">
+			<div class="prv-button-container">
+				<button id="prv6" class="small orange fluid ui labeled icon button" onclick="scrollToSection(7)">
+					<i class="icon"><img src="image/left.png" class="arrow-icon"></i>
+					<div id="prv6-desc">前言 2</div>
+				</button>
+			</div>
+			<div class="next-button-container">
+				<button id="next0" class="small green fluid ui right labeled icon button" onclick="scrollToSection(9);markIntro22Readed();">
+					<i class="icon"><img src="image/right.png" class="arrow-icon"></i>
+					<div id="next0-desc">問題 7</div>
+				</button>
+			</div>
+		</div>
+
+		<div id="quiz7" class="main-block">
+			<div class="main-block-title">
+				<h2>請回答下列問題</h2>
+			</div>
+			<div class="quiz7-desc">
+				<p style="text-indent: -1em;">7.  甲烷於地球大氣中總量已達到1,900百萬噸，請根據【<span data-tooltip="#" data-position="bottom left"><a href="javascript:;">前言 2</a></span>】所提示的甲烷數值來源與消耗，建立地球大氣甲烷的存耗模型。<br>
+				（將右側圖示拖曳至下方模型的「來源」或「消耗」區域，並在模型中填上「大氣甲烷總量」）</p>
+			</div>
+			<div class="quiz7-canvas-container">
+				<iframe id="quiz7-modeling" class="quiz7-modeling" src="quiz7.html" frameborder="0"></iframe> 
+			</div>
+		</div>
+		<div class="main-block-footer">
+			<div class="prv-button-container">
+				<button id="prv6" class="small orange fluid ui labeled icon button" onclick="scrollToSection(8)">
+					<i class="icon"><img src="image/left.png" class="arrow-icon"></i>
+					<div id="prv6-desc">前言 2（續）</div>
+				</button>
+			</div>
+			<div id="next7-hint" class="summitbtn-warning-container">
+				<br>問題 7 尚未完成作答
+			</div>
+			<div class="next-button-container">
+				<button id="next10" class="small green fluid ui right labeled icon button disabled" onclick="scrollToSection(10)">
+					<i class="icon"><img src="image/right.png" class="arrow-icon"></i>
+					<div id="next10-desc">問題 8</div>
+				</button>
+			</div>
+		</div>
+
+<!--		<div id="quiz8" class="main-block">
+			<div class="main-block-title">
+				<h2>請回答下列問題</h2>
+			</div>
+			<div class="quiz7-desc">
+				<p style="text-indent: -1em;">7.  甲烷於地球大氣中總量已達到1,900百萬噸，請根據甲烷數值來源與消耗，建立地球大氣甲烷的存耗模型。<br>
+				（將右側圖示拖曳至下方模型的「來源」或「消耗」區域，並在模型中填上「大氣甲烷總量」）</p>
+			</div>
+			<div class="quiz7-canvas-container">
+				<iframe id="quiz7-modeling" class="quiz7-modeling" src="quiz7.html" frameborder="0"></iframe> 
+			</div>
+		</div>
+		<div class="main-block-footer">
+			<div class="prv-button-container">
+				<button id="prv9" class="small orange fluid ui labeled icon button" onclick="scrollToSection(9)">
+					<i class="icon"><img src="image/left.png" class="arrow-icon"></i>
+					<div id="prv9-desc">問題 7</div>
+				</button>
+			</div>
+			<div id="next7-hint" class="summitbtn-warning-container">
+				<br>問題 7 尚未完成作答
+			</div>
+			<div class="next-button-container">
+				<button id="next10" class="small green fluid ui right labeled icon button disabled" onclick="scrollToSection(11)">
+					<i class="icon"><img src="image/right.png" class="arrow-icon"></i>
+					<div id="next11-desc">問題 9</div>
+				</button>
+			</div>
+		</div>
+-->
+		<img id="dot" src="image/dot.png" style="width: 0; visibility: hidden">
+		<img id="square" src="image/square.png" style="width: 0; visibility: hidden">
+		<img id="triangle" src="image/triangle.png" style="width: 0; visibility: hidden">
+	</div>	
+	
+	<form id="answerForm" form method="post" action="https://ccr.tw/student_video_answer.php">
+		<input type="hidden" id="answer1" name="answer1" />
+		<input type="hidden" id="answer2" name="answer2" />
+		<input type="hidden" id="answer3" name="answer3" />
+		<input type="hidden" id="answer4" name="answer4" />
+		<input type="hidden" id="answer5" name="answer5" />
+		<input type="hidden" id="answer6" name="answer6`" />
+		<input type="hidden" name="q_id" value="" />
+		<input type="hidden" name="s_id" value="" />
+		<input type="hidden" name="r_id" value="" />
+		<input type="hidden" name="t_id" value="" />
+	</form>
 </body>
 </html>
 

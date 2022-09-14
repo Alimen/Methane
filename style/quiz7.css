@@ -1,0 +1,144 @@
+body {
+	font-family: Lato, Microsoft JhengHei;
+}
+
+[draggable="true"] {
+	/*
+	 To prevent user selecting inside the drag source
+	*/
+	user-select: none;
+	-moz-user-select: none;
+	-webkit-user-select: none;
+	-ms-user-select: none;
+}
+
+#quiz7 {
+	display: block;
+	width: 1000px;
+	height: 420px;
+}
+
+#quiz7 > .container {
+	width: 208px;
+	float: left;
+	border-radius: 10px;
+	display: grid;
+	grid-template-columns: repeat(2, 50%);
+	grid-auto-flow: column;
+  	align-items: center;
+}
+
+#quiz7 > .container_1 {
+	height: 264px;
+	padding-top: 156px;
+	grid-template-rows: repeat(1, 104px);
+}
+
+#quiz7 > .container_2 {
+	height: 316px;
+	padding-top: 104px;
+	grid-template-rows: repeat(2, 104px);
+}
+
+#quiz7 > .container_3 {
+	height: 368px;
+	padding-top: 52px;
+	grid-template-rows: repeat(3, 104px);
+}
+
+#quiz7 > .container_4 {
+	height: 420px;
+	grid-template-rows: repeat(4, 104px);
+}
+
+#quiz7 > .container_full {
+	height: 420px;
+	grid-template-rows: repeat(4, 104px);
+}
+
+#quiz7 > #item_source > div:nth-child(-n+4) {
+	grid-column-start: 2;
+}
+
+#quiz7 > .item_supply {
+	margin-left: 40px;
+	padding-top: 5px;
+	border: 2px solid #CCC;
+	position: relative;
+}
+
+#quiz7 > .item_supply > .supply_desc {
+	position: absolute;
+	top: -2px;
+	width: 100%;
+	text-align: center;
+}
+
+#quiz7 .item {
+	display: block;
+	height: 104px;
+	/*width: 140px;*/
+	text-align: center;
+}
+
+#quiz7 .item > .item_desc {	
+	font-size: 0.7em;
+	font-weight: bold;
+	margin-top: -7px;
+}
+
+#quiz7 .img_wrapper {
+	position: relative;
+	float: left;
+}
+
+#quiz7 .img_wrapper > .desc_left {
+	position: absolute;
+	top: 172px;
+	left: 36px;
+}
+
+#quiz7 .img_wrapper > .desc_right {
+	position: absolute;
+	top: 172px;
+	left: 10px;
+}
+
+#quiz7 .central_wrapper {
+	width: 162px;
+	float: left;
+	padding-top: 104px;
+}
+
+#quiz7 .central_wrapper > .central {
+	width: 150px;
+	height: 190px;
+	border: 6px solid #666;
+	border-radius: 44px;
+}
+
+#quiz7 .central_wrapper > .central #ch4_total {
+	width: 50px;
+	text-align: center;
+	-moz-appearance: textfield;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+#quiz7 .central_wrapper .desc_wrapper {
+	display: block;
+	width: 130px;
+	margin: 30px auto;
+}
+
+#quiz7 .dragging {
+	opacity: .25;
+}
+
+#quiz7 .hover {
+	background-color: rgba(33, 133, 208, 0.45);
+}
