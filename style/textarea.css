@@ -16,7 +16,8 @@ textarea {
     transition: color 0.1s ease, border-color 0.1s ease;
     font-size: 1em;
     line-height: 1.2857;
-    resize: vertical;
+    /*resize: vertical;}*/
+    resize: none;
 }
 
 textarea:focus {
@@ -26,4 +27,8 @@ textarea:focus {
     -webkit-appearance: none;
     -webkit-box-shadow: none;
     box-shadow: none;
+}
+
+textarea:disabled {
+    opacity: 0.45;
 }

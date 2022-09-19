@@ -1,4 +1,4 @@
-﻿var sectionIds = ["intro", "exp1", "quiz1", "exp2", "quiz3", "quiz4", "quiz5", "intro2", "intro2-2", "quiz7"/*, "quiz8", "quiz9", "quiz10"*/];
+﻿var sectionIds = ["intro", "exp1", "quiz1", "exp2", "quiz3", "quiz4", "quiz5", "intro2", "intro2-2", "quiz7", "quiz8", "quiz9", "quiz10"];
 var intro2Readed = false;
 var intro22Readed = false;
 
@@ -98,12 +98,42 @@ function updateCheck()
 
     if (quiz7Ch4Total && (quiz7Sources.length + quiz7Consumes.length >= 7)) {
         document.getElementById("cm9").classList.remove("hidden");
-        document.getElementById("next10").classList.remove("disabled");
-        document.getElementById("next7-hint").innerHTML = "";
+        document.getElementById("next9").classList.remove("disabled");
+        document.getElementById("next9-hint").innerHTML = "";
     } else {
         document.getElementById("cm9").classList.add("hidden");
+        document.getElementById("next9").classList.add("disabled");
+        document.getElementById("next9-hint").innerHTML = "<br>問題 7 尚未完成作答";
+    }
+
+    if (document.getElementById("ans8").value) {
+        document.getElementById("cm10").classList.remove("hidden");
+        document.getElementById("next10").classList.remove("disabled");
+        document.getElementById("next10-hint").innerHTML = "";
+    } else {
+        document.getElementById("cm10").classList.add("hidden");
         document.getElementById("next10").classList.add("disabled");
-        document.getElementById("next7-hint").innerHTML = "<br>問題 7 尚未完成作答";
+        document.getElementById("next10-hint").innerHTML = "<br>問題 8 尚未完成作答";
+    }
+
+    if (q9TextInputed) {
+        document.getElementById("cm11").classList.remove("hidden");
+        document.getElementById("next11").classList.remove("disabled");
+        document.getElementById("next11-hint").innerHTML = "";
+    } else {
+        document.getElementById("cm11").classList.add("hidden");
+        document.getElementById("next11").classList.add("disabled");
+        document.getElementById("next11-hint").innerHTML = "<br>問題 9 尚未完成作答";
+    }
+
+    if (q10Finished) {
+        document.getElementById("cm12").classList.remove("hidden");
+        document.getElementById("next12").classList.remove("disabled");
+        document.getElementById("next12-hint").innerHTML = "";
+    } else {
+        document.getElementById("cm12").classList.add("hidden");
+        document.getElementById("next12").classList.add("disabled");
+        document.getElementById("next12-hint").innerHTML = "<br>問題 10 尚未完成作答";
     }
 }
 
@@ -144,6 +174,7 @@ function quiz7UpdateItems(sourceLst, consumeLst)
 
 function sumitAnswers()
 {
+/*
     //document.getElementById("answer1").value = expGraphToString(q1points);
     document.getElementById("answer1").value = quizSelectorToString(q1selections);
 
@@ -168,6 +199,7 @@ function sumitAnswers()
     document.getElementById("answer6").value = document.getElementById("ans2").value;
 
     document.getElementById("answerForm").submit();
+*/
 }
 
 function expGraphToString(points)

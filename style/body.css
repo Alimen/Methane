@@ -347,7 +347,7 @@ select {
 
 .quiz7-desc {
 	left: calc(60px + 1em);
-	width: 100%;
+	width: 954px;
 	height: 2.5em;
 	position: relative;
 	clear: left;
@@ -366,4 +366,93 @@ select {
 	overflow: hidden;
 	display: inline;
 	float: left;
+}
+
+/*--------------
+    Quiz 8
+---------------*/
+
+.quiz8-desc {
+	left: calc(60px + 1em);
+	width: 840px;
+	height: 4.5em;
+	position: relative;
+	clear: left;
+}
+
+.quiz8-canvas-container {
+	left: 110px;
+	position: relative;
+	width: 760px;
+	height: 210px;
+}
+
+.quiz8-desc2 {
+	left: calc(60px + 1em);
+	width: 840px;
+	height: 3.5em;
+	position: relative;
+	clear: left;
+}
+
+.quiz8-textarea-container {
+	left: calc(60px + 1em);
+	position: relative;
+}
+
+.quiz8-quotes {
+	width: 760px;
+	height: 210px;
+	position: relative;
+	scrolling: no;
+	overflow: hidden;
+	display: inline;
+	float: left;
+}
+
+/*--------------
+    Quiz 9
+---------------*/
+
+.quiz9-desc {
+	display: inline-block;
+	text-align: left;
+	margin: -20px auto;
+	width: calc(80% - 400px);
+	position: relative;
+	/*border: 1px solid #ccc;*/
+}
+
+.quiz9-img {
+	display: inline-block;
+	text-align: center;
+	vertical-align: top;
+	margin: 0 auto;
+	padding: 50px 60px 0;
+	padding-right: calc(60px - 1em);
+}
+
+.quiz9-textarea-container {
+	display: inline-block;
+	width: 380px;
+	max-height: 340px;
+	overflow: auto;
+}
+
+.quiz9-button-container {
+	padding-top: 2px;
+	width: 340px;
+	text-align: right;
+}
+
+/*--------------
+    Quiz 10
+---------------*/
+
+.quiz10-img {
+	display: inline-block;
+	text-align: center;
+	vertical-align: top;
+	left: calc(60px + 1em);
+	padding-top: 40px;
 }

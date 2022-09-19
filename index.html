@@ -15,6 +15,7 @@
 	<script type="text/javascript" src="script/quiz1.js"></script>
 	<script type="text/javascript" src="script/exp2.js"></script>
 	<script type="text/javascript" src="script/quiz2.js"></script>
+	<script type="text/javascript" src="script/quiz9.js"></script>
 </head>
 
 <body>
@@ -476,7 +477,6 @@
 			<br>問題 5<small>&amp;</small>6 尚未完成作答
 		</div>
 			<div class="next-button-container">
-				<!--<button id="next6" class="small green fluid ui right labeled icon button disabled" onclick="sumitAnswers()">-->
 				<button id="next6" class="small green fluid ui right labeled icon button disabled" onclick="scrollToSection(7)">
 					<i class="icon"><img src="image/right.png" class="arrow-icon"></i>
 					<div id="next6-desc">前言 2</div>
@@ -498,15 +498,15 @@
 		</div>
 		<div class="main-block-footer">
 			<div class="prv-button-container">
-				<button id="prv6" class="small orange fluid ui labeled icon button" onclick="scrollToSection(6)">
+				<button id="prv7" class="small orange fluid ui labeled icon button" onclick="scrollToSection(6)">
 					<i class="icon"><img src="image/left.png" class="arrow-icon"></i>
-					<div id="prv6-desc">問題 5<small>&amp;</small>6</div>
+					<div id="prv7-desc">問題 5<small>&amp;</small>6</div>
 				</button>
 			</div>
 			<div class="next-button-container">
-				<button id="next0" class="small green fluid ui right labeled icon button" onclick="scrollToSection(8);markIntro2Readed();">
+				<button id="next7" class="small green fluid ui right labeled icon button" onclick="scrollToSection(8);markIntro2Readed();">
 					<i class="icon"><img src="image/right.png" class="arrow-icon"></i>
-					<div id="next0-desc">前言 2（續）</div>
+					<div id="next7-desc">前言 2（續）</div>
 				</button>
 			</div>
 		</div>
@@ -536,15 +536,15 @@
 		</div>
 		<div class="main-block-footer">
 			<div class="prv-button-container">
-				<button id="prv6" class="small orange fluid ui labeled icon button" onclick="scrollToSection(7)">
+				<button id="prv8" class="small orange fluid ui labeled icon button" onclick="scrollToSection(7)">
 					<i class="icon"><img src="image/left.png" class="arrow-icon"></i>
-					<div id="prv6-desc">前言 2</div>
+					<div id="prv8-desc">前言 2</div>
 				</button>
 			</div>
 			<div class="next-button-container">
-				<button id="next0" class="small green fluid ui right labeled icon button" onclick="scrollToSection(9);markIntro22Readed();">
+				<button id="next8" class="small green fluid ui right labeled icon button" onclick="scrollToSection(9);markIntro22Readed();">
 					<i class="icon"><img src="image/right.png" class="arrow-icon"></i>
-					<div id="next0-desc">問題 7</div>
+					<div id="next8-desc">問題 7</div>
 				</button>
 			</div>
 		</div>
@@ -554,7 +554,7 @@
 				<h2>請回答下列問題</h2>
 			</div>
 			<div class="quiz7-desc">
-				<p style="text-indent: -1em;">7.  甲烷於地球大氣中總量已達到1,900百萬噸，請根據【<span data-tooltip="#" data-position="bottom left"><a href="javascript:;">前言 2</a></span>】所提示的甲烷數值來源與消耗，建立地球大氣甲烷的存耗模型。<br>
+				<p style="text-indent: -1em;">7.  甲烷於地球大氣中總量已達到1,900百萬噸，請根據【<span class="popup"><a href="javascript:;">前言 2</a><span class="popuptext">甲烷於地球大氣中總量已達到1,900 百萬噸，其中人為活動影響的來源包括：<br>化石燃料的產生與使用（105百萬噸/年）<br>農業、畜牧業與廢棄物（188百萬噸/年）<br><br>自然產生的來源包括：<br>生物性燃燒（34百萬噸/年）<br>濕地（167百萬噸/年）<br>其他自然現象（例如：地質湖泊、海洋、永凍土）（64百萬噸/年）<br><br>於大氣中消耗甲烷的方式有：<br>氣溶膠沉降（33百萬噸/年）<br>光化學反應（515百萬噸/年）</span></span>】所提示的甲烷數值來源與消耗，建立地球大氣甲烷的存耗模型。<br>
 				（將右側圖示拖曳至下方模型的「來源」或「消耗」區域，並在模型中填上「大氣甲烷總量」）</p>
 			</div>
 			<div class="quiz7-canvas-container">
@@ -563,52 +563,133 @@
 		</div>
 		<div class="main-block-footer">
 			<div class="prv-button-container">
-				<button id="prv6" class="small orange fluid ui labeled icon button" onclick="scrollToSection(8)">
+				<button id="prv9" class="small orange fluid ui labeled icon button" onclick="scrollToSection(8)">
 					<i class="icon"><img src="image/left.png" class="arrow-icon"></i>
-					<div id="prv6-desc">前言 2（續）</div>
+					<div id="prv9-desc">前言 2（續）</div>
 				</button>
 			</div>
-			<div id="next7-hint" class="summitbtn-warning-container">
+			<div id="next9-hint" class="summitbtn-warning-container">
 				<br>問題 7 尚未完成作答
 			</div>
 			<div class="next-button-container">
-				<button id="next10" class="small green fluid ui right labeled icon button disabled" onclick="scrollToSection(10)">
+				<button id="next9" class="small green fluid ui right labeled icon button disabled" onclick="scrollToSection(10)">
 					<i class="icon"><img src="image/right.png" class="arrow-icon"></i>
-					<div id="next10-desc">問題 8</div>
+					<div id="next9-desc">問題 8</div>
 				</button>
 			</div>
 		</div>
 
-<!--		<div id="quiz8" class="main-block">
+		<div id="quiz8" class="main-block">
 			<div class="main-block-title">
 				<h2>請回答下列問題</h2>
 			</div>
-			<div class="quiz7-desc">
-				<p style="text-indent: -1em;">7.  甲烷於地球大氣中總量已達到1,900百萬噸，請根據甲烷數值來源與消耗，建立地球大氣甲烷的存耗模型。<br>
-				（將右側圖示拖曳至下方模型的「來源」或「消耗」區域，並在模型中填上「大氣甲烷總量」）</p>
+			<div class="quiz8-desc">
+				<p style="text-indent: -1em;">8. 目前已有105個國家簽署「全球甲烷承諾」的國家，本國為一開發中國家，能源有98%仰賴進口，其中約94%為化石能源。使用天然氣的燃氣發電為38.6%，未來會逐步調整為50%，能源最終用途以工業為主，佔54%，每人平均排碳量約為全球2.5倍。
 			</div>
-			<div class="quiz7-canvas-container">
-				<iframe id="quiz7-modeling" class="quiz7-modeling" src="quiz7.html" frameborder="0"></iframe> 
+			<div class="quiz8-canvas-container">
+				<iframe id="quiz8-quotes" class="quiz8-quotes" src="quiz8.html" frameborder="0"></iframe> 
+			</div>
+			<div class="quiz8-desc2">
+				請將滑鼠移至上方人像上，聽聽各方的說法。<br>
+				若你是決策者，是否要簽屬甲烷減量的氣候協議？理由為何？並說明呼應全球議題可能實施政策。
+			</div>
+			<div class="quiz8-textarea-container">			
+				<textarea id="ans8" rows="3" cols="100" onchange="updateCheck()"></textarea>
 			</div>
 		</div>
 		<div class="main-block-footer">
 			<div class="prv-button-container">
-				<button id="prv9" class="small orange fluid ui labeled icon button" onclick="scrollToSection(9)">
+				<button id="prv10" class="small orange fluid ui labeled icon button" onclick="scrollToSection(9)">
 					<i class="icon"><img src="image/left.png" class="arrow-icon"></i>
-					<div id="prv9-desc">問題 7</div>
+					<div id="prv10-desc">問題 7</div>
 				</button>
 			</div>
-			<div id="next7-hint" class="summitbtn-warning-container">
-				<br>問題 7 尚未完成作答
+			<div id="next10-hint" class="summitbtn-warning-container">
+				<br>問題 8 尚未完成作答
 			</div>
 			<div class="next-button-container">
 				<button id="next10" class="small green fluid ui right labeled icon button disabled" onclick="scrollToSection(11)">
 					<i class="icon"><img src="image/right.png" class="arrow-icon"></i>
-					<div id="next11-desc">問題 9</div>
+					<div id="next10-desc">問題 9</div>
 				</button>
 			</div>
 		</div>
--->
+
+		<div id="quiz9" class="main-block">
+			<div class="main-block-title">
+				<h2>請回答下列問題</h2>
+			</div>
+			<div class="quiz9-img">
+				<img src="image/fig4.jpg"><br>
+				<div class="img-credit">示意圖，Image credit: Freepik</div>
+			</div>
+			<div class="quiz9-desc">
+				<p style="text-indent: -1em;">9.  提出至少三個可以阻止全球升溫的科學性方法。</p>
+				<div id="quiz9-textarea-container" class="quiz9-textarea-container">
+					<textarea rows="2" cols="36" placeholder="方法 1" onchange="onQuiz9TextChange()"></textarea>
+					<textarea rows="2" cols="36" placeholder="方法 2" onchange="onQuiz9TextChange()"></textarea>
+					<textarea rows="2" cols="36" placeholder="方法 3" onchange="onQuiz9TextChange()"></textarea>
+				</div>
+				<div class="quiz9-button-container">
+					<bottom id="quiz9-addbtn" class="blue compact mini ui icon button" onclick="onQuiz9AddBtn()">
+						<i class="icon"><img src="image/add.png" width="28px" height="28px"></i>
+					</button>
+				</div>
+			</div>
+		</div>
+		<div class="main-block-footer">
+			<div class="prv-button-container">
+				<button id="prv11" class="small orange fluid ui labeled icon button" onclick="scrollToSection(10)">
+					<i class="icon"><img src="image/left.png" class="arrow-icon"></i>
+					<div id="prv11-desc">問題 8</div>
+				</button>
+			</div>
+			<div id="next11-hint" class="summitbtn-warning-container">
+				<br>問題 9 尚未完成作答
+			</div>
+			<div class="next-button-container">
+				<button id="next11" class="small green fluid ui right labeled icon button disabled" onclick="scrollToSection(12)">
+					<i class="icon"><img src="image/right.png" class="arrow-icon"></i>
+					<div id="next11-desc">問題 10</div>
+				</button>
+			</div>
+		</div>
+
+		<div id="quiz10" class="main-block">
+			<div class="main-block-title">
+				<h2>請回答下列問題</h2>
+			</div>
+			<div class="quiz8-desc">
+				<p style="text-indent: -1em;">10. 完成「甲烷疑雲」試題後，是否有觸發你的什麼思想想法和行為行動？</p>
+				<p style="margin-left: 3em;">
+					<input type="radio" name="quiz10radio" value="無" onchange="onQuiz10Ratio(true)"> 無，沒有想法。 <br>
+					<input type="radio" name="quiz10radio" value="有" onchange="onQuiz10Ratio(false)"> 有，我想要 ......
+				</p>
+				<textarea id="ans10" rows="3" cols="100" onchange="onQuiz10TextChange()" disabled></textarea>
+				<div class="quiz10-img">
+					<img src="image/fig5.jpg"><br>
+					<div class="img-credit">示意圖，Image credit: tawatchai07 on Freepik</div>
+				</div>
+			</div>
+		</div>
+		<div class="main-block-footer">
+			<div class="prv-button-container">
+				<button id="prv12" class="small orange fluid ui labeled icon button" onclick="scrollToSection(11)">
+					<i class="icon"><img src="image/left.png" class="arrow-icon"></i>
+					<div id="prv12-desc">問題 9</div>
+				</button>
+			</div>
+			<div id="next12-hint" class="summitbtn-warning-container">
+				<br>問題 10 尚未完成作答
+			</div>
+			<div class="next-button-container">
+				<button id="next12" class="small green fluid ui right labeled icon button disabled" onclick="sumitAnswers()">
+					<i class="icon"><img src="image/right.png" class="arrow-icon"></i>
+					<div id="next12-desc">交卷！</div>
+				</button>
+			</div>
+		</div>
+
 		<img id="dot" src="image/dot.png" style="width: 0; visibility: hidden">
 		<img id="square" src="image/square.png" style="width: 0; visibility: hidden">
 		<img id="triangle" src="image/triangle.png" style="width: 0; visibility: hidden">
