@@ -124,6 +124,7 @@ select {
 	padding: 20px 40px 0 60px;
 	width: 560px;
 	position: relative;
+	user-select: none;
 }
 
 .intro-img {
@@ -142,6 +143,7 @@ select {
 	margin: 0 auto;
 	padding-top: 20px;
 	width: 80%;
+	user-select: none;
 }
 
 .intro2-img {
@@ -161,6 +163,7 @@ select {
 	padding: 20px 0;
 	width: 360px;
 	position: relative;
+	user-select: none;
 }
 
 .intro2-2-img {
@@ -182,6 +185,14 @@ select {
     Exp 1
 ---------------*/
 
+.exp-general-desc {
+	left: calc(60px + 1em);
+	width: 840px;
+	height: 3em;
+	position: relative;
+	clear: left;
+}
+
 .exp1-timer {
 	height: 48px;
 	width: 405px;
@@ -196,7 +207,7 @@ select {
 .exp1-timer-bar {
 	position: absolute;
 	height: 20px;
-	top: 85px;
+	top: calc(85px + 3em);
 	left: 102px;
 }
 
@@ -221,8 +232,8 @@ select {
 .exp1-desc {
 	top: -55px;
 	left: calc(60px + 1em);
-	width: 840px;
-	height: 4em;
+	width: 850px;
+	height: 1em;
 	position: relative;
 	clear: left;
 }
@@ -255,6 +266,15 @@ select {
 	margin: 1 5px 1 5px;
 	background-color: #cfdcee;
 	text-align: center;
+}
+
+.exp2-desc {
+	top: -55px;
+	left: calc(60px + 1em);
+	width: 840px;
+	height: 2em;
+	position: relative;
+	clear: left;
 }
 
 /*--------------

@@ -16,6 +16,7 @@ body {
 	display: block;
 	width: 1000px;
 	height: 420px;
+	position: relative;
 }
 
 #quiz7 > .container {
@@ -117,7 +118,8 @@ body {
 	border-radius: 44px;
 }
 
-#quiz7 .central_wrapper > .central #ch4_total {
+#quiz7 .central_wrapper > .central #ch4_total,
+#quiz7 > .future_wrapper #ch4_future {
 	width: 50px;
 	text-align: center;
 	-moz-appearance: textfield;
@@ -133,6 +135,13 @@ input::-webkit-inner-spin-button {
 	display: block;
 	width: 130px;
 	margin: 30px auto;
+}
+
+#quiz7 .future_wrapper {
+	position: absolute;
+	bottom: 30px;
+	left: 50%;
+	transform: translateX(-124px) translateX(-50%);
 }
 
 #quiz7 .dragging {

@@ -58,3 +58,15 @@ function onQuiz10TextChange()
 	}
 	updateCheck();
 }
+
+function quiz9Answer()
+{
+	var output = "";
+	q9Texts.forEach(t => {
+		if (t.value) {
+			output += ", \"" + t.value + "\"";
+		}
+	});
+	output = output.substring(2);
+	return output;
+}

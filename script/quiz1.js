@@ -19,7 +19,8 @@ var q1selections;
 
 var q1DotCnt = 0;
 var q1GraphFinished = false;
-var q1RadioFinished = false;
+var q2Radio1Finished = false;
+var q2Radio2Finished = false;
 
 function initQuiz1Canvas()
 {
@@ -48,9 +49,14 @@ function initQuiz1Canvas()
     document.getElementById("quiz1-select3").options [0].selected = true;
 
 	//document.getElementsByName("quiz1pen")[0].checked = true;
-	document.getElementsByName("quiz1radio")[0].checked = false;
-	document.getElementsByName("quiz1radio")[1].checked = false;
-    q1RadioFinished = false
+	document.getElementsByName("quiz1radio1")[0].checked = false;
+	document.getElementsByName("quiz1radio1")[1].checked = false;
+	document.getElementsByName("quiz1radio1")[2].checked = false;
+	document.getElementsByName("quiz1radio2")[0].checked = false;
+	document.getElementsByName("quiz1radio2")[1].checked = false;
+	document.getElementsByName("quiz1radio2")[2].checked = false;
+    q2Radio1Finished = false;
+    q2Radio2Finished = false;
 
 	//quiz1Canvas.addEventListener("mousemove", q1EventMouseMove, true);
 	//quiz1Canvas.addEventListener("click", q1EventMouseClick, true);
@@ -263,13 +269,16 @@ function q1SetColor(i)
     drawQuiz1Canvas();
 }
 
-function q1RadioChanged()
+function q2RadioChanged(groupId)
 {
-    if (!q1RadioFinished) {
-        q1RadioFinished = true;
-        if (q1GraphFinished && q1RadioFinished) {
-            updateCheck();
-        }
+    if (groupId == 1) {
+	q2Radio1Finished = true;
+    } else if (groupId == 2) {
+	q2Radio2Finished = true;
+    }
+    
+    if (q1GraphFinished && q2Radio1Finished && q2Radio2Finished) {
+        updateCheck();
     }
 }
 

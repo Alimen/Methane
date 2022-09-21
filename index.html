@@ -22,84 +22,84 @@
 	<div class="aside">
 		<div class="aside-container">	   
 			<div class="ui vertical steps">
-				<div class="active step" id="step0">
+				<a class="active step" id="step0" onclick="scrollToSection(0)">
 					<img src="image/check.png" class="check-icon" id="cm0">
 					<div class="content">
 						<div class="description" id="step-desc1">前言 1</div>
 					</div>
-				</div>
-				<div class="disabled step" id="step1">
+				</a>
+				<a class="disabled step" id="step1" onclick="scrollToSection(1)">
 					<img src="image/check.png" class="check-icon hidden" id="cm1">
 					<div class="content">
 						<div class="description" id="step-desc2">實驗 1</div>
 					</div>
-				</div>
-				<div class="disabled step" id="step2">
+				</a>
+				<a class="disabled step" id="step2" onclick="scrollToSection(2)">
 					<img src="image/check.png" class="check-icon hidden" id="cm2">
 					<div class="content">
 						<div class="description" id="step-desc3">問題 1<small>&amp;</small>2</div>
 					</div>
-				</div>
-				<div class="disabled step" id="step3">
+				</a>
+				<a class="disabled step" id="step3" onclick="scrollToSection(3)">
 					<img src="image/check.png" class="check-icon hidden" id="cm3">
 					<div class="content">
 						<div class="description" id="step-desc4">實驗 2</div>
 					</div>
-				</div>
-				<div class="disabled step" id="step4">
+				</a>
+				<a class="disabled step" id="step4" onclick="scrollToSection(4)">
 					<img src="image/check.png" class="check-icon hidden" id="cm4">
 					<div class="content">
 						<div class="description" id="step-desc5">問題 3</div>
 					</div>
-				</div>
-				<div class="disabled step" id="step5">
+				</a>
+				<a class="disabled step" id="step5" onclick="scrollToSection(5)">
 					<img src="image/check.png" class="check-icon hidden" id="cm5">
 					<div class="content">
 						<div class="description" id="step-desc6">問題 4</div>
 					</div>
-				</div>
-				<div class="disabled step" id="step6">
+				</a>
+				<a class="disabled step" id="step6" onclick="scrollToSection(6)">
 					<img src="image/check.png" class="check-icon hidden" id="cm6">
 					<div class="content">
 						<div class="description" id="step-desc7">問題 5<small>&amp;</small>6</div>
 					</div>
-				</div>
-				<div class="disabled step" id="step7">
+				</a>
+				<a class="disabled step" id="step7" onclick="scrollToSection(7)">
 					<img src="image/check.png" class="check-icon hidden" id="cm7">
 					<div class="content">
 						<div class="description" id="step-desc8">前言 2</div>
 					</div>
-				</div>
-				<div class="disabled step" id="step8">
+				</a>
+				<a class="disabled step" id="step8" onclick="scrollToSection(8)">
 					<img src="image/check.png" class="check-icon hidden" id="cm8">
 					<div class="content">
 						<div class="description" id="step-desc9">前言 2（續）</div>
 					</div>
-				</div>
-				<div class="disabled step" id="step9">
+				</a>
+				<a class="disabled step" id="step9" onclick="scrollToSection(9)">
 					<img src="image/check.png" class="check-icon hidden" id="cm9">
 					<div class="content">
 						<div class="description" id="step-desc10">問題 7</div>
 					</div>
-				</div>
-				<div class="disabled step" id="step10">
+				</a>
+				<a class="disabled step" id="step10" onclick="scrollToSection(10)">
 					<img src="image/check.png" class="check-icon hidden" id="cm10">
 					<div class="content">
 						<div class="description" id="step-desc11">問題 8</div>
 					</div>
-				</div>
-				<div class="disabled step" id="step11">
+				</a>
+				<a class="disabled step" id="step11" onclick="scrollToSection(11)">
 					<img src="image/check.png" class="check-icon hidden" id="cm11">
 					<div class="content">
 						<div class="description" id="step-desc12">問題 9</div>
 					</div>
-				</div>
-				<div class="disabled step" id="step12">
+				</a>
+				<a class="disabled step" id="step12" onclick="scrollToSection(12)">
 					<img src="image/check.png" class="check-icon hidden" id="cm12">
 					<div class="content">
 						<div class="description" id="step-desc13">問題 10</div>
 					</div>
-				</div>
+				</a>
 			</div>
 		</div>
 	</div>
@@ -132,6 +132,9 @@
 			<div class="main-block-title">
 				<h2>實驗 1</h2>
 			</div>
+			<div class="exp-general-desc">
+				<p style="text-indent: -1em;">小柯設計的實驗及操作步驟如下：（請點選「&gt;」觀看實驗）</p>
+			</div>
 			<image id="exp1TimerBar" width="0px" src="image/TimerBar.png" class="exp1-timer-bar">
 			<image src="image/Timer.png" class="exp1-timer">
 
@@ -157,7 +160,6 @@
 			</div>
 
 			<div id="exp1-desc" class="exp1-desc">
-				<p style="text-indent: -1em;">小柯設計的實驗及操作步驟如下：</p>
 				<p style="text-indent: -1em;">1.  小柯取了三個2公升裝的寶特瓶，各自滴入一滴的水並裝滿空氣後鎖緊（此時水會蒸發成水蒸氣），分別編號A、B、C。</p>
 			</div>
 			<div class="exp1-prvbtn-container">
@@ -219,21 +221,21 @@
 					<img src="image/triangle_line.png"> →  
 					<select id="quiz1-select1" onchange="q1SelectChanged(1)">
 						<option value="unknown">？？？</option>
-						<option value="A">A 瓶 (空氣 + 水)</option>
+						<option value="A">A 瓶 (空氣 + 水 + 空氣)</option>
 						<option value="B">B 瓶 (空氣 + 水 + CO₂)</option>
 						<option value="C">C 瓶 (空氣 + 水 + CH₄)</option>
 					</select><br>
 					<img src="image/dot_line.png"> →  
 					<select id="quiz1-select2" onchange="q1SelectChanged(2)">
 						<option value="unknown">？？？</option>
-						<option value="A">A 瓶 (空氣 + 水)</option>
+						<option value="A">A 瓶 (空氣 + 水 + 空氣)</option>
 						<option value="B">B 瓶 (空氣 + 水 + CO₂)</option>
 						<option value="C">C 瓶 (空氣 + 水 + CH₄)</option>
 					</select><br>
 					<img src="image/square_line.png"> →  
 					<select id="quiz1-select3" onchange="q1SelectChanged(3)">
 						<option value="unknown">？？？</option>
-						<option value="A">A 瓶 (空氣 + 水)</option>
+						<option value="A">A 瓶 (空氣 + 水 + 空氣)</option>
 						<option value="B">B 瓶 (空氣 + 水 + CO₂)</option>
 						<option value="C">C 瓶 (空氣 + 水 + CH₄)</option>
 					</select>
@@ -241,10 +243,15 @@
 
 				<br>
 				<br>
-				<p style="text-indent: -1em;">2.  上述實驗1中，寶特瓶 A 扮演的角色為何？</p>
+				<p style="text-indent: -1em;">2.  上述實驗1中，寶特瓶 A 扮演的角色為何？（請於A、B、C組中 選一項）；又操作步驟二中目的為控制何種變因？（請於D、E、F中選一項）</p>
 				<p style="margin-left: 3em;">
-					<input type="radio" name="quiz1radio" value="實驗組" onchange="q1RadioChanged()"> 實驗組 <br>
-					<input type="radio" name="quiz1radio" value="對照組" onchange="q1RadioChanged()"> 對照組
+					<input type="radio" name="quiz1radio1" value="實驗組" onchange="q2RadioChanged(1)"> (A) 實驗組 <br>
+					<input type="radio" name="quiz1radio1" value="對照組" onchange="q2RadioChanged(1)"> (B) 對照組 <br>
+					<input type="radio" name="quiz1radio1" value="光照組" onchange="q2RadioChanged(1)"> (C) 光照組 <br><br>
+
+					<input type="radio" name="quiz1radio2" value="氣體密度" onchange="q2RadioChanged(2)"> (D) 氣體密度 <br>
+					<input type="radio" name="quiz1radio2" value="氣體體積" onchange="q2RadioChanged(2)"> (E) 氣體體積 <br>
+					<input type="radio" name="quiz1radio2" value="不同暖化指數的氣體" onchange="q2RadioChanged(2)"> (F) 不同暖化指數的氣體 
 				</p>
 			</div>
 		</div>
@@ -270,6 +277,9 @@
 			<div class="main-block-title">
 				<h2>實驗 2</h2>
 			</div>
+			<div class="exp-general-desc">
+				<p style="text-indent: -1em;">進行完實驗1之後，小柯繼續設計「實驗2」：（請點選「&gt;」觀看實驗）</p>
+			</div>
 			<image id="exp2TimerBar" width="0px" src="image/TimerBar.png" class="exp1-timer-bar">
 			<image src="image/Timer.png" class="exp1-timer">
 
@@ -294,8 +304,8 @@
 				<span style="margin-left: 115px;">【表2】</span>
 			</div>
 
-			<div id="exp2-desc" class="exp1-desc">
-				<p style="text-indent: -1em;">1.  進行完實驗1之後，小柯繼續設計「實驗2」。他知道水蒸氣會因為紫外線照射而形成．OH，故進行實驗2時，先以紫外燈照射三個寶特瓶一段時間後，才開啟燈泡進行與實驗1相同的實驗步驟來進行探究。</p>
+			<div id="exp2-desc" class="exp2-desc">
+				<p style="text-indent: -1em;">1.  小柯知道水蒸氣會因為紫外線照射而形成．OH，故進行實驗2時，先以紫外燈照射三個寶特瓶一段時間後，才開啟燈泡進行與實驗1相同的實驗步驟來進行探究。</p>
 			</div>
 			<div class="exp1-prvbtn-container">
 				<bottom id="exp2-prvbtn" class="blue compact mini ui icon button disabled" onclick="onExp2PrvBtn()">
@@ -356,21 +366,21 @@
 					<img src="image/triangle_line.png"> →  
 					<select id="quiz3-select1" onchange="q3SelectChanged(1)">
 						<option value="unknown">？？？</option>
-						<option value="A">A 瓶 (空氣 + 水)</option>
+						<option value="A">A 瓶 (空氣 + 水 + 空氣)</option>
 						<option value="B">B 瓶 (空氣 + 水 + CO₂)</option>
 						<option value="C">C 瓶 (空氣 + 水 + CH₄)</option>
 					</select><br>
 					<img src="image/dot_line.png"> →  
 					<select id="quiz3-select2" onchange="q3SelectChanged(2)">
 						<option value="unknown">？？？</option>
-						<option value="A">A 瓶 (空氣 + 水)</option>
+						<option value="A">A 瓶 (空氣 + 水 + 空氣)</option>
 						<option value="B">B 瓶 (空氣 + 水 + CO₂)</option>
 						<option value="C">C 瓶 (空氣 + 水 + CH₄)</option>
 					</select><br>
 					<img src="image/square_line.png"> →  
 					<select id="quiz3-select3" onchange="q3SelectChanged(3)">
 						<option value="unknown">？？？</option>
-						<option value="A">A 瓶 (空氣 + 水)</option>
+						<option value="A">A 瓶 (空氣 + 水 + 空氣)</option>
 						<option value="B">B 瓶 (空氣 + 水 + CO₂)</option>
 						<option value="C">C 瓶 (空氣 + 水 + CH₄)</option>
 					</select>
@@ -455,15 +465,14 @@
 			</div>
 			<div class="quiz3-desc">
 				<p style="text-indent: -1em;">
-			5.  倘若你剛剛的紀錄正確，實驗2的變化曲線中，A、B曲線幾乎沒有改變，但C曲線變得較貼近B曲線，可推論其原因為何？（簡答）</p>
+			5.  倘若你剛剛的紀錄正確，實驗2的變化曲線中，A、B曲線幾乎沒有改變，但C曲線變得較貼近B曲線，可推論其原因為何？<br><br>
+			（請以「因為...，所以...」的寫作方式作答。）</p>
 					<textarea id="ans1" rows="2" cols="36" onchange="updateCheck()"></textarea>
-					<br>
-					<br>
 					<br>
 					<p style="text-indent: -1em;">
 			6.  對於實驗目的而言曉明和小華有各自的想法，曉明認為僅需要進行實驗2即可，而小華認為兩組實驗都要做。你贊同哪一位同學的觀點呢？為什麼？<br><br>
 			（請先根據實驗的結果進行敘述，再說明能支持論點的論證基礎）</p>
-					<textarea id="ans2" rows="3" cols="36" onchange="updateCheck()"></textarea>
+					<textarea id="ans2" rows="2" cols="36" onchange="updateCheck()"></textarea>
 			</div>		
 		</div>
 		<div class="main-block-footer">
@@ -584,7 +593,7 @@
 				<h2>請回答下列問題</h2>
 			</div>
 			<div class="quiz8-desc">
-				<p style="text-indent: -1em;">8. 目前已有105個國家簽署「全球甲烷承諾」的國家，本國為一開發中國家，能源有98%仰賴進口，其中約94%為化石能源。使用天然氣的燃氣發電為38.6%，未來會逐步調整為50%，能源最終用途以工業為主，佔54%，每人平均排碳量約為全球2.5倍。
+				<p style="text-indent: -1em;">8. 目前已有105個國家簽署「全球甲烷承諾」的國家，本國為一開發中國家，能源有98%仰賴進口，其中約94%為化石能源。使用天然氣的燃氣發電為38.6%，未來會逐步調整為50%，能源最終用途以工業為主，佔54%，每人平均排碳量約為全球2.5倍。</p>
 			</div>
 			<div class="quiz8-canvas-container">
 				<iframe id="quiz8-quotes" class="quiz8-quotes" src="quiz8.html" frameborder="0"></iframe> 
@@ -662,8 +671,8 @@
 			<div class="quiz8-desc">
 				<p style="text-indent: -1em;">10. 完成「甲烷疑雲」試題後，是否有觸發你的什麼思想想法和行為行動？</p>
 				<p style="margin-left: 3em;">
-					<input type="radio" name="quiz10radio" value="無" onchange="onQuiz10Ratio(true)"> 無，沒有想法。 <br>
-					<input type="radio" name="quiz10radio" value="有" onchange="onQuiz10Ratio(false)"> 有，我想要 ......
+					<input type="radio" name="quiz10radio" value="無，沒有想法。" onchange="onQuiz10Ratio(true)"> 無，沒有想法。 <br>
+					<input type="radio" name="quiz10radio" value="有，我想要 ...... " onchange="onQuiz10Ratio(false)"> 有，我想要 ......
 				</p>
 				<textarea id="ans10" rows="3" cols="100" onchange="onQuiz10TextChange()" disabled></textarea>
 				<div class="quiz10-img">
@@ -701,7 +710,11 @@
 		<input type="hidden" id="answer3" name="answer3" />
 		<input type="hidden" id="answer4" name="answer4" />
 		<input type="hidden" id="answer5" name="answer5" />
-		<input type="hidden" id="answer6" name="answer6`" />
+		<input type="hidden" id="answer6" name="answer6" />
+		<input type="hidden" id="answer7" name="answer7" />
+		<input type="hidden" id="answer8" name="answer8" />
+		<input type="hidden" id="answer9" name="answer9" />
+		<input type="hidden" id="answer10" name="answer10" />
 		<input type="hidden" name="q_id" value="" />
 		<input type="hidden" name="s_id" value="" />
 		<input type="hidden" name="r_id" value="" />

@@ -25,6 +25,9 @@ window.onload = function prepareQuiz7()
 
 	let ch4TotalFld = document.getElementById('ch4_total');
 	ch4TotalFld.addEventListener('input', updateCh4Total);
+
+	let ch4FutureFld = document.getElementById('ch4_future');
+	ch4FutureFld.addEventListener('input', updateCh4Future);
 }
 
 function cancelDefault(e)
@@ -76,15 +79,17 @@ function updateAnswer()
 
 	const sourceItems = Array.from(itemSource.children);
 	sourceItems.forEach(item => {
-		curVal += getItemValue(item.id);
-		sourceLst.push(item.id);
+		let id = getItemId(item);
+		curVal += getItemValue(id);
+		sourceLst.push(id);
 	});
 	resetItemContainerStyle(itemSource, sourceItems.length);
 
 	const consumeItems = Array.from(itemConsume.children);
 	consumeItems.forEach(item => {
-		curVal -= getItemValue(item.id);
-		consumeLst.push(item.id);
+		let id = getItemId(item);
+		curVal -= getItemValue(id);
+		consumeLst.push(id);
 	});
 	resetItemContainerStyle(itemConsume, consumeItems.length);
 
@@ -96,11 +101,15 @@ function updateAnswer()
 	parent.quiz7UpdateItems(sourceLst, consumeLst);
 }
 
-function getItemValue(item)
+function getItemId(item)
 {
-	item = item.substring(5);
-	let id = parseInt(item, 10);
-	return itemValues [id];
+	return item.id.substring(5);
+}
+
+function getItemValue(id)
+{
+	let i = parseInt(id, 10);
+	return itemValues [i];
 }
 
 function resetItemContainerStyle(container, itemCnt)
@@ -127,4 +136,9 @@ function resetItemContainerStyle(container, itemCnt)
 function updateCh4Total(e)
 {
 	window.parent.quiz7UpdateCh4Total(e.target.value);
+}
+
+function updateCh4Future(e)
+{
+	window.parent.quiz7UpdateCh4Future(e.target.value);
 }

@@ -1,6 +1,5 @@
 ﻿function prepareExp2BottleA() {
-    document.getElementById("exp2-bottleA").contentWindow.document.getElementById("bottle-content-label").innerHTML = "空氣<br>+<br>水<br>";
-    document.getElementById("exp2-bottleA").contentWindow.document.getElementById("exp2_tape").style.visibility = "hidden"; 
+    document.getElementById("exp2-bottleA").contentWindow.document.getElementById("bottle-content-label").innerHTML = "空氣<br>+<br>水<br>+<br>空氣";
 }
 
 function prepareExp2BottleB() {
@@ -189,7 +188,7 @@ function updateExp2NavBtn()
 function updateExp2Desc()
 {
     if (exp2Sec < 2) {
-        document.getElementById("exp2-desc").innerHTML = "<p style=\"text-indent: -1em;\">1.  進行完實驗1之後，小柯繼續設計『實驗2』。他知道水蒸氣會因為紫外線照射而形成．OH，故進行實驗乙時，先以紫外燈照射三個寶特瓶一段時間後，才開啟燈泡進行與實驗甲相同的實驗步驟來進行探究。</p>";          
+        document.getElementById("exp2-desc").innerHTML = "<p style=\"text-indent: -1em;\">1.  小柯知道水蒸氣會因為紫外線照射而形成．OH，故進行實驗2時，先以紫外燈照射三個寶特瓶一段時間後，才開啟燈泡進行與實驗1相同的實驗步驟來進行探究。</p>";          
     } else {
         document.getElementById("exp2-desc").innerHTML = "<p style=\"text-indent: -1em;\">2.  再次開啟燈泡持續對三個寶特瓶進行照射，並將三個寶特瓶內氣體上升溫度隨時間的變化紀錄下來如【表2】。</p>";
     }

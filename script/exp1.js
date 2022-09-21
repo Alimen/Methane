@@ -1,6 +1,5 @@
 ﻿function prepareExp1BottleA() {
-    document.getElementById("exp1-bottleA").contentWindow.document.getElementById("bottle-content-label").innerHTML = "空氣<br>+<br>水<br>";
-    document.getElementById("exp1-bottleA").contentWindow.document.getElementById("exp1_tape").style.visibility = "hidden"; 
+    document.getElementById("exp1-bottleA").contentWindow.document.getElementById("bottle-content-label").innerHTML = "空氣<br>+<br>水<br>+<br>空氣";
 }
 
 function prepareExp1BottleB() {
@@ -17,7 +16,7 @@ var exp1Tick = -1;
 var exp1Paused = true;
 var exp1Finished = false;
 
-window.addEventListener("load", exp1Init, false);
+window.addEventListener("load", exp1Init);
 
 function exp1Init()
 {
@@ -45,18 +44,20 @@ function exp1update()
         updateExp1NavBtn();
 
     } else if (exp1Tick == 110) {
-        document.getElementById("exp1-bottleB").contentWindow.gwd.auto_Test_btn2Click();
+        document.getElementById("exp1-bottleA").contentWindow.gwd.auto_Test_btn2Click();
     } else if (exp1Tick == 130) {
+        document.getElementById("exp1-bottleB").contentWindow.gwd.auto_Test_btn2Click();
+    } else if (exp1Tick == 150) {
         document.getElementById("exp1-bottleC").contentWindow.gwd.auto_Test_btn2Click();
-    } else if (exp1Tick == 260) {
+    } else if (exp1Tick == 280) {
         exp1Paused = true;
         exp1Sec = 4;
         updateExp1Desc();
         updateExp1NavBtn();
 
-    } else if (300 <= exp1Tick && exp1Tick <= 540) {
+    } else if (320 <= exp1Tick && exp1Tick <= 560) {
         updateExp1Table();
-    } else if (exp1Tick == 541) {
+    } else if (exp1Tick == 561) {
         exp1Paused = true;
         exp1Sec = 6;
         updateExp1NavBtn();
@@ -67,8 +68,8 @@ function exp1update()
 
 function updateExp1Table()
 {
-    var startTick = 300;
-    var endTick = 540;
+    var startTick = 320;
+    var endTick = 560;
 
     var t = exp1Tick - startTick;
     if (t < 0) {
@@ -169,24 +170,23 @@ function onExp1NxtBtn()
         case 3:
             exp1Tick = 101;
             exp1Paused = false;
-            document.getElementById("exp1-bottleA").contentWindow.gwd.auto_Test_btn3bClick();
             break;
         case 4:
-            exp1Tick = 261;
+            exp1Tick = 281;
             exp1Paused = true;
             document.getElementById("exp1-bottleA").contentWindow.gwd.auto_Test_btn3bClick();
             document.getElementById("exp1-bottleB").contentWindow.gwd.auto_Test_btn3bClick();
             document.getElementById("exp1-bottleC").contentWindow.gwd.auto_Test_btn3bClick();
             break;
         case 5:
-            exp1Tick = 261;
+            exp1Tick = 281;
             exp1Paused = false;
             document.getElementById("exp1-bottleA").contentWindow.gwd.auto_Test_btn3Click();
             document.getElementById("exp1-bottleB").contentWindow.gwd.auto_Test_btn3Click();
             document.getElementById("exp1-bottleC").contentWindow.gwd.auto_Test_btn3Click();
             break;
         case 6:
-            exp1Tick = 541;
+            exp1Tick = 561;
             exp1Paused = true;
             updateExp1Table();
             updateExp1NavBtn();
@@ -217,9 +217,9 @@ function updateExp1NavBtn()
 function updateExp1Desc()
 {
     if (exp1Sec < 2) {
-        document.getElementById("exp1-desc").innerHTML = "<p style=\"text-indent: -1em;\">小柯設計的實驗及操作步驟如下：</p><p style=\"text-indent: -1em;\">1.  小柯取了三個2公升裝的寶特瓶，各自滴入一滴的水並裝滿空氣後鎖緊（此時水會蒸發成水蒸氣），分別編號A、B、C。</p>";          
+        document.getElementById("exp1-desc").innerHTML = "<p style=\"text-indent: -1em;\">1.  小柯取了三個2公升裝的寶特瓶，各自滴入一滴的水並裝滿空氣後鎖緊（此時水會蒸發成水蒸氣），分別編號A、B、C。</p>";          
     } else if (exp1Sec < 4) {
-        document.getElementById("exp1-desc").innerHTML = "<p style=\"text-indent: -1em;\">2.  除了A瓶以外，B瓶及C瓶先各自抽出5毫升的空氣，然後添加5毫升的 CO<span style=\"font-size: 12px\">2</span> 到B瓶，添加5毫升的 CH<span style=\"font-size: 12px\">4</span> 到C瓶。</p>";
+        document.getElementById("exp1-desc").innerHTML = "<p style=\"text-indent: -1em;\">2.  A瓶、B瓶及C瓶先各自抽出5毫升的空氣，然後添加5毫升的空氣到A瓶，5毫升的 CO<span style=\"font-size: 12px\">2</span> 到B瓶，5毫升的 CH<span style=\"font-size: 12px\">4</span> 到C瓶。</p>";
     } else {
         document.getElementById("exp1-desc").innerHTML = "<p style=\"text-indent: -1em;\">3.  小柯開啟60瓦的燈泡持續對三個寶特瓶進行照射，並將三個寶特瓶內氣體上升溫度隨時間的變化紀錄下來如【表1】。</p>";
     }
