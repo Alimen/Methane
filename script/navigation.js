@@ -1,4 +1,5 @@
 ﻿const sectionIds = ["intro", "exp1", "quiz1", "exp2", "quiz3", "quiz4", "quiz5", "intro2", "intro2-2", "quiz7", "quiz8", "quiz9", "quiz10"];
+var browseHistory = ["intro"];
 var maxStep = 0;
 
 var intro2Readed = false;
@@ -172,6 +173,7 @@ function scrollToSection(secId)
 {
     var target = document.getElementById(sectionIds [secId]);
     window.scrollTo({ 'behavior': 'smooth', 'top': target.offsetTop });
+    browseHistory.push(sectionIds [secId]);
 }
 
 function markIntro2Readed()
@@ -231,6 +233,7 @@ function sumitAnswers()
     document.getElementById("answer9").value = quiz9Answer();
     document.getElementById("answer10").value = document.querySelector('input[name="quiz10radio"]:checked').value + document.getElementById("ans10").value;
 
+    document.getElementById("history").value = browseHistory.join(" > ");
     //document.getElementById("answerForm").submit();
 }
 
