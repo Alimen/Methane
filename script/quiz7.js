@@ -94,9 +94,9 @@ function updateAnswer()
 	resetItemContainerStyle(itemConsume, consumeItems.length);
 
 	if (curVal < 0) {
-		itemSum.innerHTML = "每年甲烷變化量：<br>" + curVal.toString() + " 百萬噸/年";
+		itemSum.innerHTML = curVal.toString();
 	} else {
-		itemSum.innerHTML = "每年甲烷變化量：<br>+" + curVal.toString() + " 百萬噸/年";
+		itemSum.innerHTML = "+" + curVal.toString();
 	}
 	parent.quiz7UpdateItems(sourceLst, consumeLst);
 }

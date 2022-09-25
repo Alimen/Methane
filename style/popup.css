@@ -85,12 +85,12 @@
   -webkit-transition: all 0.1s ease;
   transition: all 0.1s ease;
 }
-.popup:hover::before,
-.popup:hover>.popuptext {
+.popup.show::before,
+.popup.show>.popuptext {
   visibility: visible;
   pointer-events: auto;
 }
-.popup:hover::before {
+.popup.show::before {
   -webkit-transform: rotate(45deg) scale(1) !important;
           transform: rotate(45deg) scale(1) !important;
   opacity: 1;
@@ -101,7 +101,7 @@
   -webkit-transform: scale(0) !important;
           transform: scale(0) !important;
 }
-.popup:hover>.popuptext {
+.popup.show>.popuptext {
   -webkit-transform: scale(1) !important;
           transform: scale(1) !important;
 }

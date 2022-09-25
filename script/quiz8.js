@@ -6,7 +6,7 @@ window.onload = function prepareQuiz8()
 	quotes = document.querySelectorAll('.quote');
 	portraits = document.querySelectorAll('.portrait');
 	portraits.forEach(portrait => {
-  		portrait.addEventListener('mouseover', onHighlight);
+  		portrait.addEventListener('click', onHighlight);
 	});
 }
 

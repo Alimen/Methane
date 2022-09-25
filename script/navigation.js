@@ -42,8 +42,12 @@ function updateCheck()
     let unansweredQ = [];
     if (exp1Finished) {
         document.getElementById("cm1").classList.remove("hidden");
+        document.getElementById("next1").classList.remove("disabled");
+        document.getElementById("next1-hint").innerHTML = "";
     } else {
         document.getElementById("cm1").classList.add("hidden");
+        document.getElementById("next1").classList.add("disabled");
+        document.getElementById("next1-hint").innerHTML = "<br>實驗 1 尚未完成";
     }
 
     if (q1GraphFinished && q2Radio1Finished && q2Radio2Finished) {
@@ -65,8 +69,12 @@ function updateCheck()
 
     if (exp2Finished) {
         document.getElementById("cm3").classList.remove("hidden");
+        document.getElementById("next3").classList.remove("disabled");
+        document.getElementById("next3-hint").innerHTML = "";
     } else {
         document.getElementById("cm3").classList.add("hidden");
+        document.getElementById("next3").classList.add("disabled");
+        document.getElementById("next3-hint").innerHTML = "<br>實驗 2 尚未完成";
     }
 
     if (q2GraphFinished) {
@@ -190,6 +198,11 @@ function markIntro22Readed()
         intro22Readed = true;
         updateCheck();
     }
+}
+
+function quiz7PopupToggle()
+{
+   document.getElementById("quiz7-popup").classList.toggle("show");   
 }
 
 function quiz7UpdateCh4Total(amount)

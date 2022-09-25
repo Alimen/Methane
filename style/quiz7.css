@@ -137,6 +137,19 @@ input::-webkit-inner-spin-button {
 	margin: 30px auto;
 }
 
+#quiz7 .desc_wrapper .highlight {
+	display: inline-block;
+	text-align: center;
+	font-size: 12.9px;
+	padding-top: 1px;
+	padding-bottom: 1px;
+	height: 18.4px;
+	width: 52.4px;
+	border: 1px solid #999;
+	border-radius: 2px;
+	background: white;
+}
+
 #quiz7 .future_wrapper {
 	position: absolute;
 	bottom: 30px;
