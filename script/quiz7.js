@@ -3,7 +3,9 @@ var itemSource;
 var itemConsume;
 var itemSum;
 
-window.onload = function prepareQuiz7()
+window.addEventListener("load", prepareQuiz7);
+
+function prepareQuiz7()
 {
 	itemSource = document.getElementById('item_source');
 	itemConsume = document.getElementById('item_consume');
@@ -135,10 +137,12 @@ function resetItemContainerStyle(container, itemCnt)
 
 function updateCh4Total(e)
 {
-	window.parent.quiz7UpdateCh4Total(e.target.value);
+	//window.parent.quiz7UpdateCh4Total(e.target.value);
+	quiz7UpdateCh4Total(e.target.value);
 }
 
 function updateCh4Future(e)
 {
-	window.parent.quiz7UpdateCh4Future(e.target.value);
+	//window.parent.quiz7UpdateCh4Future(e.target.value);
+	quiz7UpdateCh4Future(e.target.value);
 }

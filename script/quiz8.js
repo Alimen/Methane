@@ -1,16 +1,18 @@
 var quotes = [];
 var portraits = [];
 
-window.onload = function prepareQuiz8()
+window.addEventListener("load", prepareQuiz8);
+
+function prepareQuiz8()
 {
 	quotes = document.querySelectorAll('.quote');
 	portraits = document.querySelectorAll('.portrait');
 	portraits.forEach(portrait => {
-  		portrait.addEventListener('click', onHighlight);
+  		portrait.addEventListener('click', onHighlightQuiz8);
 	});
 }
 
-function onHighlight(e)
+function onHighlightQuiz8(e)
 {
 	portraits.forEach(portrait => {
 		if (portrait.id == e.target.id) {
