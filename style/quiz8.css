@@ -1,45 +1,45 @@
-body {
+/*body {
 	font-family: Lato, Microsoft JhengHei;
-}
+}*/
 
-#quiz8 {
+#quiz8-canvas {
 	display: block;
 	position: relative;
 	width: 740px;
 	height: 190px;
 }
 
-#quiz8 > .portraits {
+#quiz8-canvas > .portraits {
 	text-align: center;
 	margin: 0 auto;
 	height: 80px;
 }
 
-#quiz8 .portrait {
+#quiz8-canvas .portrait {
 	display: inline-block;
 	position: relative;
 	margin-top: 20px;
 }
 
-#quiz8 .portrait>img {
+#quiz8-canvas .portrait>img {
 	width: 100%;
 	height: 100%;
 	pointer-events: none;
 }
 
-#quiz8 .portrait.highlight {
+#quiz8-canvas .portrait.highlight {
 	margin-top: 0;
 	width: 80px;
 	height: 80px;
 }
 
-#quiz8 > .quote_container {
+#quiz8-canvas > .quote_container {
 	height: 104px;
 	text-align: center;
 }
 
 /* Popup */
-#quiz8 .quote {
+#quiz8-canvas .quote {
   pointer-events: none;
   content: '';
   position: absolute;
@@ -65,7 +65,7 @@ body {
 }
 
 /* Arrow */
-#quiz8 .portrait::before {
+#quiz8-canvas .portrait::before {
   pointer-events: none;
   position: absolute;
   content: '';
@@ -89,12 +89,12 @@ body {
 }
 
 /* Animation */
-#quiz8 .portrait::before,
-#quiz8 .quote {
+#quiz8-canvas .portrait::before,
+#quiz8-canvas .quote {
   pointer-events: none;
   visibility: hidden;
 }
-#quiz8 .portrait::before {
+#quiz8-canvas .portrait::before {
   opacity: 0;
   -webkit-transform: rotate(45deg) scale(0) !important;
           transform: rotate(45deg) scale(0) !important;
@@ -103,7 +103,7 @@ body {
   -webkit-transition: all 0.1s ease;
   transition: all 0.1s ease;
 }
-#quiz8 .quote {
+#quiz8-canvas .quote {
   opacity: 1;
   -webkit-transform-origin: center bottom;
           transform-origin: center bottom;
@@ -111,24 +111,24 @@ body {
   transition: all 0.1s ease;
 }
 
-#quiz8 .portrait.highlight::before,
-#quiz8 .quote.highlight {
+#quiz8-canvas .portrait.highlight::before,
+#quiz8-canvas .quote.highlight {
   visibility: visible;
   pointer-events: auto;
 }
 
-#quiz8 .portrait.highlight::before {
+#quiz8-canvas .portrait.highlight::before {
   -webkit-transform: rotate(45deg) scale(1) !important;
           transform: rotate(45deg) scale(1) !important;
   opacity: 1;
 }
 
 /* Animation Position */
-#quiz8 .quote {
+#quiz8-canvas .quote {
   -webkit-transform: scale(0) translateX(-50%) !important;
           transform: scale(0) translateX(-50%) !important;
 }
-#quiz8 .quote.highlight {
+#quiz8-canvas .quote.highlight {
   -webkit-transform: scale(1) translateX(-50%) !important;
           transform: scale(1) translateX(-50%) !important;
 }

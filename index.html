@@ -12,6 +12,7 @@
 	<link rel="stylesheet" type="text/css" href="style/quiz7.css">
 	<link rel="stylesheet" type="text/css" href="style/quiz8.css">
 
+	<script type="text/javascript" src="script/timer.js"></script>
 	<script type="text/javascript" src="script/navigation.js"></script>
 	<script type="text/javascript" src="script/exp1.js"></script>
 	<script type="text/javascript" src="script/quiz1.js"></script>
@@ -223,8 +224,8 @@
 			</div>
 
 			<div class="quiz3-desc">
-				<p style="text-indent: -1em;">1.  小柯根據【表1】在右方方格紙上作圖，但是不小心忘記標示圖例了！你能夠幫忙配對曲線與圖例嗎？</p>
-				<p style="margin-left: 3em;">
+				<p style="text-indent: -1em; margin-bottom: 0.5em">1.  小柯根據【表1】在右方方格紙上作圖，但是不小心忘記標示圖例了！你能夠幫忙配對曲線與圖例嗎？</p>
+				<p style="margin-left: 3em; margin-top: 0; margin-bottom: 1.5em">
 					<img src="image/triangle_line.png"> →  
 					<select id="quiz1-select1" onchange="q1SelectChanged(1)">
 						<option value="unknown">？？？</option>
@@ -246,17 +247,17 @@
 						<option value="B">B 瓶 (空氣 + 水 + CO₂)</option>
 						<option value="C">C 瓶 (空氣 + 水 + CH₄)</option>
 					</select>
-				</p><br>
+				</p>
 				<p style="text-indent: -1em;">2.  上述實驗1中，寶特瓶 A 扮演的角色為何？（請於A、B、C組中 選一項）；又操作步驟二中目的為控制何種變因？（請於D、E、F中選一項）</p>
 				<p style="margin-left: 3em;">
 					扮演角色：<br>
-					<input type="radio" name="quiz1radio1" value="實驗組" onchange="q2RadioChanged(1)"> (A) 實驗組 <br>
-					<input type="radio" name="quiz1radio1" value="對照組" onchange="q2RadioChanged(1)"> (B) 對照組 <br>
-					<input type="radio" name="quiz1radio1" value="光照組" onchange="q2RadioChanged(1)"> (C) 光照組 <br><br>
+					<input type="radio" id="quiz2radio1-1" name="quiz1radio1" value="實驗組" onchange="q2RadioChanged(1)"> (A) 實驗組 <br>
+					<input type="radio" id="quiz2radio1-2" name="quiz1radio1" value="對照組" onchange="q2RadioChanged(1)"> (B) 對照組 <br>
+					<input type="radio" id="quiz2radio1-3" name="quiz1radio1" value="光照組" onchange="q2RadioChanged(1)"> (C) 光照組 <br><br>
 					控制變因：<br>
-					<input type="radio" name="quiz1radio2" value="氣體密度" onchange="q2RadioChanged(2)"> (D) 氣體密度 <br>
-					<input type="radio" name="quiz1radio2" value="氣體體積" onchange="q2RadioChanged(2)"> (E) 氣體體積 <br>
-					<input type="radio" name="quiz1radio2" value="不同暖化指數的氣體" onchange="q2RadioChanged(2)"> (F) 不同暖化指數的氣體 
+					<input type="radio" id="quiz2radio2-1" name="quiz1radio2" value="氣體密度" onchange="q2RadioChanged(2)"> (D) 氣體密度 <br>
+					<input type="radio" id="quiz2radio2-2" name="quiz1radio2" value="氣體體積" onchange="q2RadioChanged(2)"> (E) 氣體體積 <br>
+					<input type="radio" id="quiz2radio2-3" name="quiz1radio2" value="不同暖化指數的氣體" onchange="q2RadioChanged(2)"> (F) 不同暖化指數的氣體 
 				</p>
 			</div>
 		</div>
@@ -431,11 +432,11 @@
 			<div class="quiz3-desc">
 				<p style="text-indent: -1em;">4.  請比較剛剛繪製的【實驗1】和【實驗2】，A、B、C 曲線各有什麼變化？(多選題，應選2項)</p>
 				<p style="margin-left: 3em;">
-					<input type="checkbox" name="quiz3checkbox" value="A" onchange="onCheckboxChange(0)"> A曲線幾乎不變 <br>
-					<input type="checkbox" name="quiz3checkbox" value="B" onchange="onCheckboxChange(1)"> B曲線有明顯變化 <br>
-					<input type="checkbox" name="quiz3checkbox" value="C" onchange="onCheckboxChange(2)"> C曲線幾乎不變 <br>
-					<input type="checkbox" name="quiz3checkbox" value="D" onchange="onCheckboxChange(3)"> C曲線變得更貼近 B曲線 <br>
-					<input type="checkbox" name="quiz3checkbox" value="E" onchange="onCheckboxChange(4)"> C曲線和 B曲線疊合
+					<input type="checkbox" id="quiz4checkbox1" name="quiz3checkbox" value="A" onchange="onCheckboxChange(0)"> A曲線幾乎不變 <br>
+					<input type="checkbox" id="quiz4checkbox2" name="quiz3checkbox" value="B" onchange="onCheckboxChange(1)"> B曲線有明顯變化 <br>
+					<input type="checkbox" id="quiz4checkbox3" name="quiz3checkbox" value="C" onchange="onCheckboxChange(2)"> C曲線幾乎不變 <br>
+					<input type="checkbox" id="quiz4checkbox4" name="quiz3checkbox" value="D" onchange="onCheckboxChange(3)"> C曲線變得更貼近 B曲線 <br>
+					<input type="checkbox" id="quiz4checkbox5" name="quiz3checkbox" value="E" onchange="onCheckboxChange(4)"> C曲線和 B曲線疊合
 				</p>
 			</div>
 			
@@ -472,12 +473,12 @@
 				<div class="quiz3-canvas-footer2">【實驗2】</div>
 			</div>
 			<div class="quiz3-desc">
-				<p style="text-indent: -1em;">
+				<p style="text-indent: -1em; margin-bottom: 0.5em;">
 			5.  倘若你剛剛的紀錄正確，實驗2的變化曲線中，A、B曲線幾乎沒有改變，但C曲線變得較貼近B曲線，可推論其原因為何？<br><br>
 			（請以「因為...，所以...」的寫作方式作答。）</p>
 					<textarea id="ans1" rows="2" cols="36" onchange="updateCheck()"></textarea>
 					<br>
-					<p style="text-indent: -1em;">
+					<p style="text-indent: -1em; margin-bottom: 0.5em;">
 			6.  對於實驗目的而言曉明和小華有各自的想法，曉明認為僅需要進行實驗2即可，而小華認為兩組實驗都要做。你贊同哪一位同學的觀點呢？為什麼？<br><br>
 			（請先根據實驗的結果進行敘述，再說明能支持論點的論證基礎）</p>
 					<textarea id="ans2" rows="2" cols="36" onchange="updateCheck()"></textarea>
@@ -576,7 +577,7 @@
 			</div>
 			<div class="quiz7-canvas-container">
 <!-- Embadding Quiz 7 -->
-<div id="quiz7">
+<div id="quiz7-canvas">
 	<div id="item_source" class="container container_1">
 		<div id="item_0" class="item" draggable="true">
 			<img src="image/q7_fuel.png" width="72" height="72" class="item_img" draggable="false">
@@ -670,7 +671,7 @@
 			</div>
 			<div class="quiz8-canvas-container">
 <!-- Embadding Quiz 8 -->
-<div id="quiz8">
+<div id="quiz8-canvas">
 	<div class="quote_container">
 		<div id="quote_0" class="quote">
 			化石能源開採中，增加檢測儀器降低氣體洩漏、變更採礦設備以及妥善處理廢棄礦坑，<br>
@@ -731,7 +732,7 @@
 				若你是決策者，是否要簽屬甲烷減量的氣候協議？理由為何？並說明呼應全球議題可能實施政策。
 			</div>
 			<div class="quiz8-textarea-container">			
-				<textarea id="ans8" rows="3" cols="100" onchange="updateCheck()"></textarea>
+				<textarea id="ans8" rows="3" cols="97" onchange="updateCheck()"></textarea>
 			</div>
 		</div>
 		<div class="main-block-footer">
@@ -761,11 +762,11 @@
 				<div class="img-credit">示意圖，Image credit: Freepik</div>
 			</div>
 			<div class="quiz9-desc">
-				<p style="text-indent: -1em;">9.  提出至少三個可以阻止全球升溫的科學性方法。</p>
+				<p style="text-indent: -1em; margin-bottom: 0.5em;">9.  提出至少三個可以阻止全球升溫的科學性方法。</p>
 				<div id="quiz9-textarea-container" class="quiz9-textarea-container">
-					<textarea rows="2" cols="36" placeholder="方法 1" onchange="onQuiz9TextChange()"></textarea>
-					<textarea rows="2" cols="36" placeholder="方法 2" onchange="onQuiz9TextChange()"></textarea>
-					<textarea rows="2" cols="36" placeholder="方法 3" onchange="onQuiz9TextChange()"></textarea>
+					<textarea id="ans9-1" rows="2" cols="36" placeholder="方法 1" onchange="onQuiz9TextChange()"></textarea>
+					<textarea id="ans9-2" rows="2" cols="36" placeholder="方法 2" onchange="onQuiz9TextChange()"></textarea>
+					<textarea id="ans9-3" rows="2" cols="36" placeholder="方法 3" onchange="onQuiz9TextChange()"></textarea>
 				</div>
 				<div class="quiz9-button-container">
 					<bottom id="quiz9-addbtn" class="blue compact mini ui icon button" onclick="onQuiz9AddBtn()">
@@ -799,10 +800,10 @@
 			<div class="quiz8-desc">
 				<p style="text-indent: -1em;">10. 完成「甲烷疑雲」試題後，是否有觸發你的什麼思想想法和行為行動？</p>
 				<p style="margin-left: 3em;">
-					<input type="radio" name="quiz10radio" value="無，沒有想法。" onchange="onQuiz10Ratio(true)"> 無，沒有想法。 <br>
-					<input type="radio" name="quiz10radio" value="有，我想要 ...... " onchange="onQuiz10Ratio(false)"> 有，我想要 ......
+					<input type="radio" id="quiz10radio1" name="quiz10radio" value="無，沒有想法。" onchange="onQuiz10Ratio(true)"> 無，沒有想法。 <br>
+					<input type="radio" id="quiz10radio2" name="quiz10radio" value="有，我想要 ...... " onchange="onQuiz10Ratio(false)"> 有，我想要 ......
 				</p>
-				<textarea id="ans10" rows="3" cols="100" onchange="onQuiz10TextChange()" disabled></textarea>
+				<textarea id="ans10" rows="3" cols="97" onchange="onQuiz10TextChange()" disabled></textarea>
 				<div class="quiz10-img">
 					<img src="image/fig5.jpg"><br>
 					<div class="img-credit">示意圖，Image credit: tawatchai07 on Freepik</div>

@@ -100,7 +100,8 @@ function updateAnswer()
 	} else {
 		itemSum.innerHTML = "+" + curVal.toString();
 	}
-	parent.quiz7UpdateItems(sourceLst, consumeLst);
+	//parent.quiz7UpdateItems(sourceLst, consumeLst);
+	quiz7UpdateItems(sourceLst, consumeLst);
 }
 
 function getItemId(item)

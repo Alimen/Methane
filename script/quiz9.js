@@ -12,8 +12,12 @@ function onQuiz9AddBtn()
 {
 	let newText = q9Texts [0].cloneNode(true);
 	q9Texts.push(newText);
+	newText.id = "ans9-" + q9Texts.length;
 	newText.placeholder = "方法 " + q9Texts.length;
 	newText.value = "";
+
+	newText.addEventListener("click", recordQuiz9ClickEvent);
+	newText.addEventListener("change", recordQuiz9EditEvent);
 
   	document.getElementById("quiz9-textarea-container").appendChild(newText);
 }

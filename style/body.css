@@ -7,6 +7,10 @@ html, body {
 	overflow: hidden;
 }
 
+h2 {
+	margin: 0.6em 0 0;
+}
+
 .aside {
 	width: 190px;
 	height: 100%;
@@ -69,7 +73,7 @@ select {
 .main-block {
 	width: 1060px;
 	height: calc(100vh - 80px);
-	min-height: 580px;
+	min-height: 550px;
 	display: inline-block;
 	text-align: left;
 	vertical-align: middle;
@@ -80,11 +84,12 @@ select {
 .main-block-title {
 	width: calc(100% - 180px);
 	text-align: left;
-	padding-top: 20px;
+	padding-top: 1px;
 	padding-left: 60px;
 }
 
 .main-block-footer {
+	clear: both;
 	width: 1060px;
 	height: 40px;
 	margin-bottom: 200px;
@@ -141,7 +146,7 @@ select {
 	text-align: left;
 	vertical-align: middle;
 	margin: 0 auto;
-	padding-top: 20px;
+	padding-top: 0.5em;
 	width: 80%;
 	user-select: none;
 }
@@ -170,7 +175,7 @@ select {
 	display: inline-block;
 	text-align: center;
 	vertical-align: top;
-	padding: 0 40px 0 60px;
+	padding: 50px 40px 0 60px;
 	width: 450;
 	height: 404;
 }
@@ -207,7 +212,7 @@ select {
 .exp1-timer-bar {
 	position: absolute;
 	height: 20px;
-	top: calc(85px + 3em);
+	top: calc(85px - 19px + 3em - 0.66em);
 	left: 102px;
 }
 
@@ -289,7 +294,7 @@ select {
 
 .quiz1-graph-container {
 	position: absolute;
-	top: 160px;
+	top: 140px;
 	left: 450px;
 	width: 615px;
 }
@@ -335,7 +340,7 @@ select {
 
 .quiz3-canvas-container {
 	position: absolute;
-	top: 200px;
+	top: 140px;
 	left: 460px;
 	width: 605px;
 }
@@ -413,6 +418,7 @@ select {
 	height: 3.5em;
 	position: relative;
 	clear: left;
+	margin-bottom: 0;
 }
 
 .quiz8-textarea-container {

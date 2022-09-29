@@ -11,7 +11,12 @@ var quiz7Sources = ["0"];
 var quiz7Consumes = [];
 
 window.addEventListener("scroll", updateStep);
-window.addEventListener("load", updateCheck);
+window.addEventListener("load", init);
+
+function init()
+{
+    updateCheck();
+}
 
 function updateStep()
 {
@@ -181,7 +186,7 @@ function scrollToSection(secId)
 {
     var target = document.getElementById(sectionIds [secId]);
     window.scrollTo({ 'behavior': 'smooth', 'top': target.offsetTop });
-    browseHistory.push(sectionIds [secId]);
+    //browseHistory.push(sectionIds [secId]);
 }
 
 function markIntro2Readed()
@@ -246,7 +251,9 @@ function sumitAnswers()
     document.getElementById("answer9").value = quiz9Answer();
     document.getElementById("answer10").value = document.querySelector('input[name="quiz10radio"]:checked').value + document.getElementById("ans10").value;
 
-    document.getElementById("history").value = browseHistory.join(" > ");
+    //document.getElementById("history").value = browseHistory.join(" > ");
+    document.getElementById("history").value = timerHistory;
+
     //document.getElementById("answerForm").submit();
 }
 
