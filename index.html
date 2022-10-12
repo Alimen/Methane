@@ -708,7 +708,7 @@
 			或者減少畜牧數量，但此作法可能對環境產生負面影響或者社會結構形成缺陷。另外，<br>
 			也可嘗試改變消費者飲食習慣，建立減碳的飲食模式。
 		</div>
-		<div id="quote_7" class="quote highlight">
+		<div id="quote_7" class="quote">
 			能源的火力發電燃料包含煤、天然氣...等等。其中產生1TJ的能量所附加產生的二氧化碳，<br>
 			以煤、與天然氣為例，分別為96.4以及56.1公噸，故以天然氣為主的火力發電相對於燃煤<br>
 			較為低碳。
@@ -722,17 +722,27 @@
 		<div id="portrait_4" class="portrait"><img src="image/q8_4.png"></div>
 		<div id="portrait_5" class="portrait"><img src="image/q8_5.png"></div>
 		<div id="portrait_6" class="portrait"><img src="image/q8_6.png"></div>
-		<div id="portrait_7" class="portrait highlight"><img src="image/q8_7.png"></div>
+		<div id="portrait_7" class="portrait"><img src="image/q8_7.png"></div>
 	</div>
 </div>
 <!-- End of Embadding Quiz 8 -->
 			</div>
 			<div class="quiz8-desc2">
 				請用滑鼠點擊上方人像，聽聽各方的說法。<br>
-				若你是決策者，是否要簽屬甲烷減量的氣候協議？理由為何？並說明呼應全球議題可能實施政策。
+				若你是決策者，是否要簽屬甲烷減量的氣候協議？
 			</div>
 			<div class="quiz8-textarea-container">			
-				<textarea id="ans8" rows="3" cols="97" onchange="updateCheck()"></textarea>
+				<p style="margin-left: 3em;">
+					<input type="radio" id="quiz8radio1" name="quiz8radio" value="「簽屬」甲烷減量的氣候協議" onchange="q8RadioChanged()"> 「簽屬」甲烷減量的氣候協議<br>
+					<input type="radio" id="quiz8radio2" name="quiz8radio" value="「不簽屬」甲烷減量的氣候協議" onchange="q8RadioChanged()"> 「不簽屬」甲烷減量的氣候協議<br>
+				</p>
+			</div>
+			<div class="quiz8-desc3">
+				承上，理由為何？並說明呼應全球議題可能實施政策。（請分開作答）
+			</div>
+			<div class="quiz8-textarea-container">		
+				<textarea id="ans8-1" rows="3" cols="36" placeholder="簽署 / 不簽署的理由" onchange="updateCheck()"></textarea>
+				<textarea id="ans8-2" rows="3" cols="56" placeholder="可能的實施政策" onchange="updateCheck()"></textarea>
 			</div>
 		</div>
 		<div class="main-block-footer">

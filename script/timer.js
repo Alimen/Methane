@@ -74,7 +74,10 @@ const clickEvents = {
     "portrait_5": "點擊 問題 8 頭像 6",
     "portrait_6": "點擊 問題 8 頭像 7",
     "portrait_7": "點擊 問題 8 頭像 8",
-    "ans8": "點擊 問題 8 作答區",
+    "quiz8radio1": "點擊 問題 8 簽署",
+    "quiz8radio2": "點擊 問題 8 不簽署",
+    "ans8-1": "點擊 問題 8 簽署理由作答區",
+    "ans8-1": "點擊 問題 8 實施政策作答區",
     "prv10": "點擊 返回問題 7",
     "next10": "點擊 前往問題 9",
 
@@ -94,7 +97,8 @@ const editCompleteEvents = {
     "ans2": "完成 問題 6 作答區",
     "ch4_total": "完成 問題 7 甲烷總量",
     "ch4_future": "完成 問題 7 甲烷預測",
-    "ans8": "完成 問題 8 作答區",
+    "ans8-1": "完成 問題 8 簽署理由作答區",
+    "ans8-1": "完成 問題 8 實施政策作答區",
     "ans10": "完成 問題 10 作答區"
 };
 
@@ -172,7 +176,7 @@ function recordEvent(msg)
 {
     let str = "\"" + getTimestamp() + "\":";
     str += "\"" + msg + "\"";
-    console.log(msg);
+    //console.log(msg);
 
     if (timerHistory.length > 0) {
         timerHistory += ",\n";

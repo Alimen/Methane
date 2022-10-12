@@ -144,7 +144,7 @@ function updateCheck()
 	unansweredQ.push(7);
     }
 
-    if (document.getElementById("ans8").value) {
+    if (q8Radio1Finished && document.getElementById("ans8-1").value && document.getElementById("ans8-2").value) {
         document.getElementById("cm10").classList.remove("hidden");
         document.getElementById("next10").classList.remove("disabled");
         document.getElementById("next10-hint").innerHTML = "";
@@ -231,7 +231,6 @@ function quiz7UpdateItems(sourceLst, consumeLst)
 
 function sumitAnswers()
 {
-
     document.getElementById("answer1").value = quizSelectorToString(q1selections);    
     document.getElementById("answer2").value = document.querySelector('input[name="quiz1radio1"]:checked').value + ", " + document.querySelector('input[name="quiz1radio2"]:checked').value;
     document.getElementById("answer3").value = quizSelectorToString(q2selections);
@@ -247,14 +246,14 @@ function sumitAnswers()
     document.getElementById("answer5").value = document.getElementById("ans1").value;
     document.getElementById("answer6").value = document.getElementById("ans2").value;
     document.getElementById("answer7").value = quiz7Answer();
-    document.getElementById("answer8").value = document.getElementById("ans8").value;
+    document.getElementById("answer8").value = quiz8Answer();
     document.getElementById("answer9").value = quiz9Answer();
     document.getElementById("answer10").value = document.querySelector('input[name="quiz10radio"]:checked').value + document.getElementById("ans10").value;
 
     //document.getElementById("history").value = browseHistory.join(" > ");
     document.getElementById("history").value = timerHistory;
 
-    //document.getElementById("answerForm").submit();
+    document.getElementById("answerForm").submit();
 }
 
 function expGraphToString(points)
@@ -329,6 +328,19 @@ function quiz7Answer()
     }
     output += "\", total:\"" + quiz7Ch4Total + "\"";
     output += "\", future:\"" + quiz7Ch4Future + "\"";
+
+    return output;
+}
+
+function quiz8Answer()
+{
+    var output = "sign:\"";
+    output += document.querySelector('input[name="quiz8radio"]:checked').value;
+    output += "\", reason:\"";
+    output += document.getElementById("ans8-1").value;
+    output += "\", acts:\"";
+    output += document.getElementById("ans8-2").value;
+    output += "\"";
 
     return output;
 }

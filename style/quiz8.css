@@ -6,7 +6,7 @@
 	display: block;
 	position: relative;
 	width: 740px;
-	height: 190px;
+	height: calc(80px + 1em);
 }
 
 #quiz8-canvas > .portraits {
@@ -34,7 +34,10 @@
 }
 
 #quiz8-canvas > .quote_container {
+	position: absolute;
 	height: 104px;
+	width: 100%;
+	top: -104px;
 	text-align: center;
 }
 
@@ -125,12 +128,12 @@
 
 /* Animation Position */
 #quiz8-canvas .quote {
-  -webkit-transform: scale(0) translateX(-50%) !important;
-          transform: scale(0) translateX(-50%) !important;
+  -webkit-transform: translateX(-50%) scale(0) !important;
+          transform: translateX(-50%) scale(0) !important;
 }
 #quiz8-canvas .quote.highlight {
-  -webkit-transform: scale(1) translateX(-50%) !important;
-          transform: scale(1) translateX(-50%) !important;
+  -webkit-transform: translateX(-50%) scale(1) !important;
+          transform: translateX(-50%) scale(1) !important;
 }
 
 

@@ -409,15 +409,24 @@ select {
 	left: 110px;
 	position: relative;
 	width: 760px;
-	height: 210px;
 }
 
 .quiz8-desc2 {
 	left: calc(60px + 1em);
 	width: 840px;
-	height: 3.5em;
+	height: 2.5em;
 	position: relative;
 	clear: left;
+	margin-bottom: 0;
+}
+
+.quiz8-desc3 {
+	left: calc(60px + 1em);
+	width: 840px;
+	height: 1.5em;
+	position: relative;
+	clear: left;
+	margin-top: 2em;
 	margin-bottom: 0;
 }
 
