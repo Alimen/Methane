@@ -251,7 +251,7 @@ function sumitAnswers()
     document.getElementById("answer10").value = document.querySelector('input[name="quiz10radio"]:checked').value + document.getElementById("ans10").value;
 
     //document.getElementById("history").value = browseHistory.join(" > ");
-    document.getElementById("history").value = timerHistory;
+    document.getElementById("answer11").value = timerHistory;
 
     document.getElementById("answerForm").submit();
 }
@@ -326,8 +326,9 @@ function quiz7Answer()
             output += ",";
         }
     }
-    output += "\", total:\"" + quiz7Ch4Total + "\"";
-    output += "\", future:\"" + quiz7Ch4Future + "\"";
+    output += "\", total:\"" + quiz7Ch4Total;
+    output += "\", future:\"" + quiz7Ch4Future;
+    output += "\"";
 
     return output;
 }

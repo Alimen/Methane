@@ -119,7 +119,7 @@ window.addEventListener('load', injectEvents);
 
 function resetTimer()
 {
-    timerHistory = "";
+    timerHistory = "History:\n";
 }
 
 function injectEvents()
@@ -178,7 +178,7 @@ function recordEvent(msg)
     str += "\"" + msg + "\"";
     //console.log(msg);
 
-    if (timerHistory.length > 0) {
+    if (timerHistory.length > 12) {
         timerHistory += ",\n";
     }
     timerHistory += str;
