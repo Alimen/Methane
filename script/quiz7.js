@@ -22,7 +22,7 @@ function prepareQuiz7()
 		dropTarget.addEventListener('drop', dropped);
 		dropTarget.addEventListener('dragenter', cancelDefault);
 		dropTarget.addEventListener('dragover', dragOver);
-    		dropTarget.addEventListener('dragleave', dragLeave);
+    	dropTarget.addEventListener('dragleave', dragLeave);
 	});
 
 	let ch4TotalFld = document.getElementById('ch4_total');
@@ -30,6 +30,8 @@ function prepareQuiz7()
 
 	let ch4FutureFld = document.getElementById('ch4_future');
 	ch4FutureFld.addEventListener('input', updateCh4Future);
+
+	MobileDragDrop.polyfill({});
 }
 
 function cancelDefault(e)

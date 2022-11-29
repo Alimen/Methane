@@ -1,6 +1,7 @@
 ﻿const sectionIds = ["intro", "exp1", "quiz1", "exp2", "quiz3", "quiz4", "quiz5", "intro2", "intro2-2", "quiz7", "quiz8", "quiz9", "quiz10"];
 var browseHistory = ["intro"];
 var maxStep = 0;
+var scale = 1;
 
 var intro2Readed = false;
 var intro22Readed = false;
@@ -11,11 +12,22 @@ var quiz7Sources = ["0"];
 var quiz7Consumes = [];
 
 window.addEventListener("scroll", updateStep);
+window.addEventListener("resize", onResize);
+window.addEventListener("orientationchange", onResize);
 window.addEventListener("load", init);
 
 function init()
 {
     updateCheck();
+}
+
+function onResize()
+{
+    if (window.matchMedia("(max-width: 960px)").matches) {
+        scale = 0.7;
+    } else {
+        scale = 1;
+    }
 }
 
 function updateStep()
@@ -185,7 +197,7 @@ function updateCheck()
 function scrollToSection(secId)
 {
     var target = document.getElementById(sectionIds [secId]);
-    window.scrollTo({ 'behavior': 'smooth', 'top': target.offsetTop });
+    window.scrollTo({ 'behavior': 'smooth', 'top': target.offsetTop * scale });
     //browseHistory.push(sectionIds [secId]);
 }
 
