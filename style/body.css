@@ -240,25 +240,18 @@ select {
 	left: 102px;
 }
 
-.exp1-padding-left {
-	width: 60px;
-	height: 340px;
-	display: inline;
-	float: left;
-}
-
 .exp1-bottle {
 	width: 185px;
 	height: 305px;
 	top: -25px;
+	left: 60px;
 	position: relative;
 	overflow: hidden;
-	display: inline;
-	float: left;
+	display: inline-block;
 }
 
 .exp1-desc {
-	top: -55px;
+	top: -50px;
 	left: calc(60px + 1em);
 	width: 850px;
 	height: 1em;
@@ -267,26 +260,24 @@ select {
 }
 
 .exp1-prvbtn-container {
-	top: -35px;
+	top: -30px;
 	margin-left: 60px;
 	display: inline;
 	position: relative;
-	float: left;
 }
 
 .exp1-nxtbtn-container {
-	top: -35px;
+	top: -30px;
 	margin-left: 760px;
 	display: inline;
 	position: relative;
-	float: left;
 }
 
 .exp1-table-container {
-	margin-top: 15px;
-	left: -10px;
 	position: relative;
-	float: left;
+	left: 50px;
+	top: -35px;
+	display: inline-block;
 }
 
 .exp1-table td ,th {
@@ -297,7 +288,7 @@ select {
 }
 
 .exp2-desc {
-	top: -55px;
+	top: -50px;
 	left: calc(60px + 1em);
 	width: 840px;
 	height: 2em;
@@ -455,7 +446,7 @@ select {
 .quiz8-textarea-container {
 	left: calc(60px + 1em);
 	position: relative;
-	width: 900px;
+	width: 960px;
 }
 
 .quiz8-quotes {

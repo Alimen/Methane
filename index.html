@@ -144,7 +144,6 @@
 			<img id="exp1TimerBar" width="0" src="image/TimerBar.png" class="exp1-timer-bar" draggable="false">
 			<img src="image/Timer.png" class="exp1-timer" draggable="false">
 
-			<div class="exp1-padding-left"> </div>
 			<iframe id="exp1-bottleA" class="exp1-bottle" src="exp1.html" frameborder="0" onload="prepareExp1BottleA()"></iframe> 
 			<iframe id="exp1-bottleB" class="exp1-bottle" src="exp1.html" frameborder="0" onload="prepareExp1BottleB()"></iframe> 
 			<iframe id="exp1-bottleC" class="exp1-bottle" src="exp1.html" frameborder="0" onload="prepareExp1BottleC()"></iframe> 
@@ -226,22 +225,22 @@
 
 			<div class="quiz3-desc">
 				<p style="text-indent: -1em; margin-bottom: 0.5em">1.  小柯根據【表1】在右方方格紙上作圖，但是不小心忘記標示圖例了！你能夠幫忙配對曲線與圖例嗎？</p>
-				<p style="margin-left: 3em; margin-top: 0; margin-bottom: 1.5em">
-					<img src="image/triangle_line.png"> →  
+				<p style="margin: 0 0 1em 3em">
+					<img src="image/triangle_line.png"> →
 					<select id="quiz1-select1" onchange="q1SelectChanged(1)">
 						<option value="unknown">？？？</option>
 						<option value="A">A 瓶 (空氣 + 水 + 空氣)</option>
 						<option value="B">B 瓶 (空氣 + 水 + CO₂)</option>
 						<option value="C">C 瓶 (空氣 + 水 + CH₄)</option>
 					</select><br>
-					<img src="image/dot_line.png"> →  
+					<img src="image/dot_line.png"> →
 					<select id="quiz1-select2" onchange="q1SelectChanged(2)">
 						<option value="unknown">？？？</option>
 						<option value="A">A 瓶 (空氣 + 水 + 空氣)</option>
 						<option value="B">B 瓶 (空氣 + 水 + CO₂)</option>
 						<option value="C">C 瓶 (空氣 + 水 + CH₄)</option>
 					</select><br>
-					<img src="image/square_line.png"> →  
+					<img src="image/square_line.png"> →
 					<select id="quiz1-select3" onchange="q1SelectChanged(3)">
 						<option value="unknown">？？？</option>
 						<option value="A">A 瓶 (空氣 + 水 + 空氣)</option>
@@ -249,16 +248,18 @@
 						<option value="C">C 瓶 (空氣 + 水 + CH₄)</option>
 					</select>
 				</p>
-				<p style="text-indent: -1em;">2.  上述實驗1中，寶特瓶 A 扮演的角色為何？（請於A、B、C組中 選一項）；又操作步驟二中目的為控制何種變因？（請於D、E、F中選一項）</p>
-				<p style="margin-left: 3em;">
+				<p style="text-indent: -1em; margin: 0.5em 0 0.5em 0">2.  上述實驗1中，寶特瓶 A 扮演的角色為何？（請於A、B、C組中 選一項）；又操作步驟二中目的為控制何種變因？（請於D、E、F中選一項）</p>
+				<p style="margin: 0.5em 0 0.5em 3em">
 					扮演角色：<br>
 					<input type="radio" id="quiz2radio1-1" name="quiz1radio1" value="實驗組" onchange="q2RadioChanged(1)"> (A) 實驗組 <br>
 					<input type="radio" id="quiz2radio1-2" name="quiz1radio1" value="對照組" onchange="q2RadioChanged(1)"> (B) 對照組 <br>
-					<input type="radio" id="quiz2radio1-3" name="quiz1radio1" value="光照組" onchange="q2RadioChanged(1)"> (C) 光照組 <br><br>
+					<input type="radio" id="quiz2radio1-3" name="quiz1radio1" value="光照組" onchange="q2RadioChanged(1)"> (C) 光照組 <br>
+				</p>
+				<p style="margin: 0.5em 0 0.5em 3em">
 					控制變因：<br>
 					<input type="radio" id="quiz2radio2-1" name="quiz1radio2" value="氣體密度" onchange="q2RadioChanged(2)"> (D) 氣體密度 <br>
 					<input type="radio" id="quiz2radio2-2" name="quiz1radio2" value="氣體體積" onchange="q2RadioChanged(2)"> (E) 氣體體積 <br>
-					<input type="radio" id="quiz2radio2-3" name="quiz1radio2" value="不同暖化指數的氣體" onchange="q2RadioChanged(2)"> (F) 不同暖化指數的氣體 
+					<input type="radio" id="quiz2radio2-3" name="quiz1radio2" value="不同暖化指數的氣體" onchange="q2RadioChanged(2)"> (F) 不同暖化指數的氣體
 				</p>
 			</div>
 		</div>
@@ -290,7 +291,6 @@
 			<img id="exp2TimerBar" width="0" src="image/TimerBar.png" class="exp1-timer-bar" draggable="false">
 			<img src="image/Timer.png" class="exp1-timer" draggable="false">
 
-			<div class="exp1-padding-left"> </div>
 			<iframe id="exp2-bottleA" class="exp1-bottle" src="exp2.html" frameborder="0" onload="prepareExp2BottleA()"></iframe> 
 			<iframe id="exp2-bottleB" class="exp1-bottle" src="exp2.html" frameborder="0" onload="prepareExp2BottleB()"></iframe> 
 			<iframe id="exp2-bottleC" class="exp1-bottle" src="exp2.html" frameborder="0" onload="prepareExp2BottleC()"></iframe> 
@@ -729,7 +729,7 @@
 <!-- End of Embadding Quiz 8 -->
 			</div>
 			<div class="quiz8-desc2">
-				請用點擊上方人像，聽聽各方的說法。<br>
+				請點擊上方人像，聽聽各方的說法。<br>
 				若你是決策者，是否要簽屬甲烷減量的氣候協議？
 			</div>
 			<div class="quiz8-textarea-container">			
