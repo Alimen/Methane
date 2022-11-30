@@ -6,6 +6,10 @@ html, body {
 	overflow-x: auto;
 	overflow-y: hidden;
 }
+/*
+* {
+	outline: 1px solid #f00 !important;
+}*/
 
 h2 {
 	margin: 0.6em 0 0;
@@ -60,10 +64,11 @@ select {
 	text-align: right;
 }
 
-@media only screen and (max-width: 960px) {
+@media only screen and (max-width: 960px) {	
 	.aside {
 		height: 200%;
-		transform: scale(0.5) translate(-50%, -50%);
+		transform-origin: top left;
+		transform: scale(0.5);
 	}	
 } 
 
@@ -74,7 +79,6 @@ select {
 .main {
 	margin: 5px 0 0 200px;
 	padding: 0;
-	float: left;
 }
 
 .main-block {
@@ -126,9 +130,11 @@ select {
 
 @media only screen and (max-width: 960px) {
 	.main {
-		transform: scale(0.7) translate(-37.5%, -21.42%);
+		margin-left: 80px;
+		transform-origin: top left;
+		transform: scale(0.7);
 	}
-} 
+}
 
 /*--------------
     Intro
@@ -446,6 +452,7 @@ select {
 .quiz8-textarea-container {
 	left: calc(60px + 1em);
 	position: relative;
+	width: 900px;
 }
 
 .quiz8-quotes {
