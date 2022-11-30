@@ -18,6 +18,7 @@ window.addEventListener("load", init);
 
 function init()
 {
+    onResize();
     updateCheck();
 }
 
