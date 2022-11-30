@@ -121,7 +121,7 @@
 			　　小柯想探討「．OH 對甲烷的影響」，根據相關文獻設計了以下實驗。<br><br>
 			</div>
 			<div class="intro-img">
-				<img src="image/fig1.jpg"><br>
+				<img src="image/fig1.jpg" draggable="false"><br>
 				【圖1】
 			</div>
 		</div>
@@ -141,8 +141,8 @@
 			<div class="exp-general-desc">
 				<p style="text-indent: -1em;">小柯設計的實驗及操作步驟如下：（請點選「&gt;」觀看實驗）</p>
 			</div>
-			<image id="exp1TimerBar" width="0px" src="image/TimerBar.png" class="exp1-timer-bar">
-			<image src="image/Timer.png" class="exp1-timer">
+			<img id="exp1TimerBar" width="0" src="image/TimerBar.png" class="exp1-timer-bar" draggable="false">
+			<img src="image/Timer.png" class="exp1-timer" draggable="false">
 
 			<div class="exp1-padding-left"> </div>
 			<iframe id="exp1-bottleA" class="exp1-bottle" src="exp1.html" frameborder="0" onload="prepareExp1BottleA()"></iframe> 
@@ -169,13 +169,13 @@
 				<p style="text-indent: -1em;">1.  小柯取了三個2公升裝的寶特瓶，各自滴入一滴的水並裝滿空氣後鎖緊（此時水會蒸發成水蒸氣），分別編號A、B、C。</p>
 			</div>
 			<div class="exp1-prvbtn-container">
-				<bottom id="exp1-prvbtn" class="blue compact mini ui icon button disabled" onclick="onExp1PrvBtn()">
-					<i class="icon"><img src="image/left.png" width="28px" height="28px"></i>
+				<button id="exp1-prvbtn" class="blue compact mini ui icon button disabled" onclick="onExp1PrvBtn()">
+					<i class="icon"><img src="image/left.png" width="28" height="28"></i>
 				</button>
 			</div>
 			<div class="exp1-nxtbtn-container">
-				<bottom id="exp1-nxtbtn" class="blue compact mini ui icon button" onclick="onExp1NxtBtn()">
-					<i class="icon"><img src="image/right.png" width="28px" height="28px"></i>
+				<button id="exp1-nxtbtn" class="blue compact mini ui icon button" onclick="onExp1NxtBtn()">
+					<i class="icon"><img src="image/right.png" width="28" height="28"></i>
 				</button>
 			</div>
 		</div>
@@ -219,7 +219,7 @@
 				</div>
 				<div class="quiz1-canvas-container">
 				溫度 (°C)
-					<canvas id="quiz1Canvas" width="300px" height="300px"></canvas>
+					<canvas id="quiz1Canvas" width="300" height="300"></canvas>
 					<span style="margin-left: 115px;">時間 (秒)</span>
 				</div>
 			</div>
@@ -287,8 +287,8 @@
 			<div class="exp-general-desc">
 				<p style="text-indent: -1em;">進行完實驗1之後，小柯繼續設計「實驗2」：（請點選「&gt;」觀看實驗）</p>
 			</div>
-			<image id="exp2TimerBar" width="0px" src="image/TimerBar.png" class="exp1-timer-bar">
-			<image src="image/Timer.png" class="exp1-timer">
+			<img id="exp2TimerBar" width="0" src="image/TimerBar.png" class="exp1-timer-bar" draggable="false">
+			<img src="image/Timer.png" class="exp1-timer" draggable="false">
 
 			<div class="exp1-padding-left"> </div>
 			<iframe id="exp2-bottleA" class="exp1-bottle" src="exp2.html" frameborder="0" onload="prepareExp2BottleA()"></iframe> 
@@ -315,13 +315,13 @@
 				<p style="text-indent: -1em;">1.  小柯知道水蒸氣會因為紫外線照射而形成．OH，故進行實驗2時，先以紫外燈照射三個寶特瓶一段時間後，才開啟燈泡進行與實驗1相同的實驗步驟來進行探究。</p>
 			</div>
 			<div class="exp1-prvbtn-container">
-				<bottom id="exp2-prvbtn" class="blue compact mini ui icon button disabled" onclick="onExp2PrvBtn()">
-					<i class="icon"><img src="image/left.png" width="28px" height="28px"></i>
+				<button id="exp2-prvbtn" class="blue compact mini ui icon button disabled" onclick="onExp2PrvBtn()">
+					<i class="icon"><img src="image/left.png" width="28" height="28"></i>
 				</button>
 			</div>
 			<div class="exp1-nxtbtn-container">
-				<bottom id="exp2-nxtbtn" class="blue compact mini ui icon button" onclick="onExp2NxtBtn()">
-					<i class="icon"><img src="image/right.png" width="28px" height="28px"></i>
+				<button id="exp2-nxtbtn" class="blue compact mini ui icon button" onclick="onExp2NxtBtn()">
+					<i class="icon"><img src="image/right.png" width="28" height="28"></i>
 				</button>
 			</div>		
 		</div>
@@ -365,7 +365,7 @@
 				</div>
 				<div class="quiz1-canvas-container">
 				溫度 (°C)
-					<canvas id="quiz2Canvas" width="300px" height="300px"></canvas>
+					<canvas id="quiz2Canvas" width="300" height="300"></canvas>
 					<span style="margin-left: 115px;">時間 (秒)</span>
 				</div>
 			</div>
@@ -424,8 +424,8 @@
 				<div class="quiz3-canvas-header-container">
 					A 瓶<img src="image/dot_line.png">　B 瓶<img src="image/square_line.png">　C 瓶<img src="image/triangle_line.png"><br>
 				</div>
-				<canvas id="quiz3Canvas1" width="300px" height="300px"></canvas>
-				<canvas id="quiz3Canvas2" width="300px" height="300px"></canvas>
+				<canvas id="quiz3Canvas1" width="300" height="300"></canvas>
+				<canvas id="quiz3Canvas2" width="300" height="300"></canvas>
 				<div class="quiz3-canvas-footer1">【實驗1】</div>
 				<div class="quiz3-canvas-footer2">【實驗2】</div>
 			</div>
@@ -468,8 +468,8 @@
 				<div class="quiz3-canvas-header-container">
 					A 瓶<img src="image/dot_line.png">　B 瓶<img src="image/square_line.png">　C 瓶<img src="image/triangle_line.png"><br>
 				</div>
-				<canvas id="quiz4Canvas1" width="300px" height="300px"></canvas>
-				<canvas id="quiz4Canvas2" width="300px" height="300px"></canvas>
+				<canvas id="quiz4Canvas1" width="300" height="300"></canvas>
+				<canvas id="quiz4Canvas2" width="300" height="300"></canvas>
 				<div class="quiz3-canvas-footer1">【實驗1】</div>
 				<div class="quiz3-canvas-footer2">【實驗2】</div>
 			</div>
@@ -508,7 +508,7 @@
 				<h2>前言 2</h2>
 			</div>
 			<div class="intro2-img">
-				<img src="image/fig2.jpg"><br>
+				<img src="image/fig2.jpg" draggable="false"><br>
 				<div class="img-credit">示意圖，Image credit: U.S. Department of State</div>
 			</div>
 			<div class="intro2-desc">
@@ -535,7 +535,7 @@
 				<h2>前言 2（續）</h2>
 			</div>
 			<div class="intro2-2-img">
-				<img src="image/fig3.jpg" width="450" height="360"><br>
+				<img src="image/fig3.jpg" width="450" height="360" draggable="false"><br>
 				<div class="img-credit">示意圖，Image credit: rawpixel.com on Freepik</div>
 			</div>
 			<div class="intro2-2-desc">
@@ -587,7 +587,7 @@
 	</div>
 	<div class="model_frame">
 		<div class="img_wrapper">
-			<img src="image/q7_bracket_left.png">
+			<img src="image/q7_bracket_left.png" draggable="false">
 			<div class="desc_left">來源</div>
 		</div>
 		<div class="central_wrapper">
@@ -603,7 +603,7 @@
 		</div>			
 		</div>
 		<div class="img_wrapper">
-			<img src="image/q7_bracket_right.png">
+			<img src="image/q7_bracket_right.png" draggable="false">
 			<div class="desc_right">消耗</div>
 		</div>
 	</div>
@@ -729,7 +729,7 @@
 <!-- End of Embadding Quiz 8 -->
 			</div>
 			<div class="quiz8-desc2">
-				請用滑鼠點擊上方人像，聽聽各方的說法。<br>
+				請用點擊上方人像，聽聽各方的說法。<br>
 				若你是決策者，是否要簽屬甲烷減量的氣候協議？
 			</div>
 			<div class="quiz8-textarea-container">			
@@ -769,7 +769,7 @@
 				<h2>請回答下列問題</h2>
 			</div>
 			<div class="quiz9-img">
-				<img src="image/fig4.jpg"><br>
+				<img src="image/fig4.jpg" draggable="false"><br>
 				<div class="img-credit">示意圖，Image credit: Freepik</div>
 			</div>
 			<div class="quiz9-desc">
@@ -780,8 +780,8 @@
 					<textarea id="ans9-3" rows="2" cols="36" placeholder="方法 3" onchange="onQuiz9TextChange()"></textarea>
 				</div>
 				<div class="quiz9-button-container">
-					<bottom id="quiz9-addbtn" class="blue compact mini ui icon button" onclick="onQuiz9AddBtn()">
-						<i class="icon"><img src="image/add.png" width="28px" height="28px"></i>
+					<button id="quiz9-addbtn" class="blue compact mini ui icon button" onclick="onQuiz9AddBtn()">
+						<i class="icon"><img src="image/add.png" width="28" height="28"></i>
 					</button>
 				</div>
 			</div>
@@ -816,7 +816,7 @@
 				</p>
 				<textarea id="ans10" rows="3" cols="97" onchange="onQuiz10TextChange()" disabled></textarea>
 				<div class="quiz10-img">
-					<img src="image/fig5.jpg"><br>
+					<img src="image/fig5.jpg" draggable="false"><br>
 					<div class="img-credit">示意圖，Image credit: tawatchai07 on Freepik</div>
 				</div>
 			</div>

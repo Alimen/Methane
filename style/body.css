@@ -1,6 +1,7 @@
 html, body {
 	font-family: Lato, Microsoft JhengHei;
 	background-color: #f2f2f2;
+	position: relative;
 	margin: 0;
 	padding: 0;
 	overflow-x: auto;
@@ -9,8 +10,8 @@ html, body {
 /*
 * {
 	outline: 1px solid #f00 !important;
-}*/
-
+}
+*/
 h2 {
 	margin: 0.6em 0 0;
 }
@@ -134,6 +135,10 @@ select {
 		transform-origin: top left;
 		transform: scale(0.7);
 	}
+
+	.main-block {
+		height: 550px;
+	}
 }
 
 /*--------------
@@ -176,7 +181,7 @@ select {
 	margin: 0 auto;
 	padding: 0;
 	width: 80%;
-	height: 377;
+	height: 377px;
 }
 
 .intro2-2-desc {
@@ -195,8 +200,8 @@ select {
 	text-align: center;
 	vertical-align: top;
 	padding: 50px 40px 0 60px;
-	width: 450;
-	height: 404;
+	width: 450px;
+	height: 404px;
 }
 
 .img-credit {
@@ -247,7 +252,6 @@ select {
 	height: 305px;
 	top: -25px;
 	position: relative;
-	scrolling: no;
 	overflow: hidden;
 	display: inline;
 	float: left;
@@ -287,7 +291,7 @@ select {
 
 .exp1-table td ,th {
 	padding: 0 8px 0 8px;
-	margin: 1 5px 1 5px;
+	margin: 1px 5px 1px 5px;
 	background-color: #cfdcee;
 	text-align: center;
 }
@@ -314,8 +318,8 @@ select {
 .quiz1-graph-container {
 	position: absolute;
 	top: 140px;
-	left: 450px;
-	width: 615px;
+	left: 445px;
+	width: 620px;
 }
 
 .quiz1-table-container {
@@ -360,8 +364,8 @@ select {
 .quiz3-canvas-container {
 	position: absolute;
 	top: 140px;
-	left: 460px;
-	width: 605px;
+	left: 445px;
+	width: 620px;
 }
 
 .quiz3-canvas-header-container {
@@ -406,7 +410,6 @@ select {
 	width: 1030px;
 	height: 440px;
 	position: relative;
-	scrolling: no;
 	overflow: hidden;
 	display: inline;
 	float: left;
@@ -459,7 +462,6 @@ select {
 	width: 760px;
 	height: 210px;
 	position: relative;
-	scrolling: no;
 	overflow: hidden;
 	display: inline;
 	float: left;
@@ -475,7 +477,6 @@ select {
 	margin: -20px auto;
 	width: calc(80% - 400px);
 	position: relative;
-	/*border: 1px solid #ccc;*/
 }
 
 .quiz9-img {
