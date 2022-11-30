@@ -320,21 +320,21 @@ select {
 	top: 140px;
 	left: 445px;
 	width: 620px;
+	height: calc(301px + 3.2em);
 }
 
 .quiz1-table-container {
 	position: relative;
-	display: inline;
-	float: left;
-	top: 92px;
+	display: inline-block;
 	width: 304px;
+	vertical-align: bottom;
 }
 
 .quiz1-canvas-container {
 	position: relative;
-	display: inline;
-	float: left;
+	display: inline-block;
 	width: 301px;
+	vertical-align: bottom;
 }
 
 .quiz1-canvas-header {
