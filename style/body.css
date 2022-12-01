@@ -254,7 +254,7 @@ select {
 	top: -50px;
 	left: calc(60px + 1em);
 	width: 850px;
-	height: 1em;
+	height: 2em;
 	position: relative;
 	clear: left;
 }
@@ -285,15 +285,6 @@ select {
 	margin: 1px 5px 1px 5px;
 	background-color: #cfdcee;
 	text-align: center;
-}
-
-.exp2-desc {
-	top: -50px;
-	left: calc(60px + 1em);
-	width: 840px;
-	height: 2em;
-	position: relative;
-	clear: left;
 }
 
 /*--------------
